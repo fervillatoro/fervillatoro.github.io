@@ -1,10 +1,1052 @@
 <!DOCTYPE html>
-<html lang="es-HN" dir="ltr">
+<html lang="es-HN">
   <head>
-    <meta charset="utf-8">
+    <meta property='og:url' content='https://fervillatoro.github.io/' />
+    <meta property='og:title' content='Alejandro Villatoro' />
+    <meta property='og:description' content='Alejandro Villatoro, Desarrollador Web.' />
+    <meta property='og:image' content='https://fervillatoro.github.io/img/avatar2.jpg' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <meta property="description" content="Alejandro Villatoro, Desarrollador Web" />
+    <meta property="keywords" content="alejandro villatoro, fer, villa, villatoro, fernando villa, alejandro, f, fenix, hn, honduras" />
+
+    <link rel="canonical" href="https://fervillatoro.github.io/" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style media="screen">
+    /* SCROLL */
+    ::-webkit-scrollbar{width: 12px;background-color: #F5F5F5;} ::-webkit-scrollbar-button{ display: none } ::-webkit-scrollbar-track{ background-color: #F5F5F5;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); } ::-webkit-scrollbar-track-piece{ background: rgb(45, 45, 45) } ::-webkit-scrollbar-thumb{ background-color: #555;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); } ::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-thumb:hover{ background: radial-gradient(black, transparent); } ::-webkit-scrollbar-corner{ background: red } ::-webkit-resizer{ background: red } html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+    /* MENU */
+    :root {
+      font-size: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      /* font-family: 'MuseoModerno', cursive, "Helvetica", "sans-serif"; */
+      /* color: #555; */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #151b1d;
+    }
+
+    main {
+      margin: 80px auto;
+      margin-top: 0;
+      padding: 10px;
+    }
+    main .wrap {
+      padding: 40px 0px;
+      color: gray;
+
+      /* background-color: #fff; */
+    }
+
+    main figure{
+      text-align: center;
+    }
+    img[src*="avatar"]{
+      border-radius: 50%;
+      border: solid 4px gray;
+      /* animation-name: animShowOpacity;
+      animation-duration: 2s; */
+    }
+
+    main .content{
+      min-width: 200px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+    @media only screen and (max-width:365px){
+      img[src*="avatar"]{
+        width: 100%!important;
+      }
+
+      main .title{
+        font-size: 24px!important;
+        margin-bottom:12px!important;
+      }
+    }
+
+    @keyframes animShowOpacity {
+      0%   {opacity: 0;}
+      25%   {opacity: .4;}
+      50%   {opacity: .6;}
+      75%   {opacity: .8;}
+      100%   {opacity: 1;}
+    }
+
+    main .title {
+      font-size: 2em;
+      text-align: center;
+      margin: 20px auto 5px;
+      text-transform: uppercase;
+      color: gray;
+      /* animation-name: animShowOpacity;
+      animation-duration: 3s; */
+    }
+
+    main .content *{
+      font-size: 1.2em;
+      text-align: justify;
+    }
+
+
+    header nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+    header nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      top: 170px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    header nav ul li {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    header nav ul li a {
+      display: block;
+      font-size: 2em;
+      text-decoration: none;
+      padding: 10px 0;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    header nav ul li a:hover {
+      color: #e84a5f;
+    }
+
+    .toggle-btn {
+      display: block;
+      position: fixed;
+      z-index: 13;
+      right: 25px;
+      top: 10px;
+      cursor: pointer;
+    }
+    .toggle-btn .bar {
+      width: 30px;
+      height: 2px;
+      margin: 7px auto;
+      background-color: #fff;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+    }
+    .toggle-btn .bar:nth-child(2) {
+      width: 20px;
+    }
+
+    #toggle:checked ~ nav {
+      opacity: 1;
+      visibility: visible;
+    }
+    #toggle:checked ~ nav ul {
+      top: 70px;
+    }
+    #toggle:checked ~ nav ul li {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    #toggle:checked ~ nav ul li:nth-child(1) {
+      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+    }
+    #toggle:checked ~ nav ul li:nth-child(2) {
+      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+    }
+    #toggle:checked ~ nav ul li:nth-child(3) {
+      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+    }
+    #toggle:checked ~ nav ul li:nth-child(4) {
+      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+    }
+    #toggle:checked + label.toggle-btn .bar {
+      background-color: red;
+    }
+    #toggle:checked + label.toggle-btn .bar:nth-child(2) {
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    #toggle:checked + label.toggle-btn .bar:nth-child(1) {
+      -webkit-transform: translateY(10px) rotate(45deg);
+      transform: translateY(10px) rotate(45deg);
+    }
+    #toggle:checked + label.toggle-btn .bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* TIMELINE */
+
+
+    .timeline {
+      position: relative;
+      width: 660px;
+      margin: 0 0 0 -72px;
+      margin-top: 20px;
+      padding: 1em 0;
+      list-style-type: none;
+    }
+
+    .timeline:before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: ' ';
+      display: block;
+      width: 6px;
+      height: 100%;
+      margin-left: -3px;
+      background: rgb(80,80,80);
+      background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+      background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+      background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+      background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+      background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+
+      z-index: 5;
+    }
+
+    .timeline li {
+      padding: 1em 0;
+    }
+
+    .timeline li:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    .direction-l {
+      position: relative;
+      width: 300px;
+      float: left;
+      text-align: right;
+    }
+
+    .direction-r {
+      position: relative;
+      width: 300px;
+      float: right;
+    }
+
+    .flag-wrapper {
+      position: relative;
+      display: inline-block;
+
+      text-align: center;
+    }
+
+    .flag {
+      position: relative;
+      display: inline;
+      /* background: rgb(248,248,248); */
+      padding: 6px 10px;
+      border-radius: 5px;
+
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .direction-l .flag {
+      -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+      -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+      box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    }
+
+    .direction-r .flag {
+      -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+      -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+    }
+
+    .direction-l .flag:before,
+    .direction-r .flag:before {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      content: ' ';
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin-top: -10px;
+      background: #fff;
+      border-radius: 10px;
+      border: 4px solid rgb(255,80,80);
+      z-index: 10;
+    }
+
+    .direction-r .flag:before {
+      left: -40px;
+    }
+
+    .direction-l .flag:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      height: 0;
+      width: 0;
+      margin-top: -8px;
+      border: solid transparent;
+      border-left-color: rgb(248,248,248);
+      border-width: 8px;
+      pointer-events: none;
+    }
+
+    .direction-r .flag:after {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      height: 0;
+      width: 0;
+      margin-top: -8px;
+      border: solid transparent;
+      border-right-color: rgb(248,248,248);
+      border-width: 8px;
+      pointer-events: none;
+    }
+
+    .time-wrapper {
+      display: inline;
+
+      line-height: 1em;
+      font-size: 0.66666em;
+      color: rgb(250,80,80);
+      vertical-align: middle;
+    }
+
+    .direction-l .time-wrapper {
+      float: left;
+    }
+
+    .direction-r .time-wrapper {
+      float: right;
+    }
+
+    .time {
+      display: inline-block;
+      padding: 4px 6px;
+      /* background: rgb(248,248,248); */
+    }
+
+    .desc {
+      margin: 1em 0.75em 0 0;
+
+      font-size: 0.77777em;
+      font-style: italic;
+      line-height: 1.5em;
+    }
+
+    .direction-r .desc {
+      margin: 1em 0 0 0.75em;
+    }
+
+    /* ================ Timeline Media Queries ================ */
+
+    @media screen and (max-width: 990px) {
+
+      .timeline {
+        width: 100%;
+        padding: 4em 0 1em 0;
+
+      }
+
+      .timeline li {
+        padding: 2em 0;
+      }
+
+      .direction-l,
+      .direction-r {
+        float: none;
+        width: 100%;
+
+        text-align: center;
+      }
+
+      .flag-wrapper {
+        text-align: center;
+      }
+
+      .flag {
+        background: rgb(255,255,255);
+        z-index: 15;
+      }
+
+      .direction-l .flag:before,
+      .direction-r .flag:before {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        content: ' ';
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-left: -9px;
+        background: #fff;
+        border-radius: 10px;
+        border: 4px solid rgb(255,80,80);
+        z-index: 10;
+      }
+
+      .direction-l .flag:after,
+      .direction-r .flag:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -8px;
+        height: 0;
+        width: 0;
+        margin-left: -8px;
+        border: solid transparent;
+        border-bottom-color: rgb(255,255,255);
+        border-width: 8px;
+        pointer-events: none;
+      }
+
+      .time-wrapper {
+        display: block;
+        position: relative;
+        margin: 4px 0 0 0;
+        z-index: 14;
+      }
+
+      .direction-l .time-wrapper {
+        float: none;
+      }
+
+      .direction-r .time-wrapper {
+        float: none;
+      }
+
+      .desc {
+        position: relative;
+        margin: 1em 0 0 0;
+        /* padding: 1em; */
+        background: black;
+        -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+        -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+        box-shadow: 0 0 1px rgba(0,0,0,0.20);
+
+        z-index: 15;
+      }
+
+      .direction-l .desc,
+      .direction-r .desc {
+        position: relative;
+        margin: 1em 1em 0 1em;
+        /* padding: 1em; */
+
+        z-index: 15;
+      }
+
+    }
+
+    @media screen and (min-width: 400px ?? max-width: 660px) {
+
+      .direction-l .desc,
+      .direction-r .desc {
+        margin: 1em 4em 0 4em;
+      }
+
+    }
+
+    @media only screen and (max-width: 990px) {
+
+      .col{
+        width: 100%!important;
+      }
+      .timeline{
+        margin-left: 0;
+      }
+    }
+
+
+    /* CHAT POPUP */
+    .open-button {
+      background-color: #555;
+      color: white;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      padding: 10px;
+      font-size: 24px;
+      border-radius: 50%;
+    }
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      /* border: 3px solid #f1f1f1; */
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      width: 300px;
+      padding: 10px;
+      background-color: #242526;
+      border-radius: 1em;
+
+    }
+
+    /* Full-width textarea */
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #3A3B3C;
+      resize: none;
+      min-height: 100px;
+      border-radius: 1em;
+    }
+
+    .form-container textarea:focus{
+      outline:none;
+    }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+
+
+
+
+    /* CSS GENERAL */
+    :root{
+      --body:#010101;
+      --primary:rgb(27, 100, 159);
+      --danger:rgb(121, 32, 32);
+    }
+
+    *{
+      font-family: 'Montserrat', "Helvetica", arial;
+    }
+    html,body{
+      background:var(--body);
+      scroll-behavior: smooth;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    *{
+      color:gray;
+    }
+
+    .quote{
+      text-align:center;
+    }
+    .fa-quote-right, .fa-quote-left{
+      font-size: 1.4em;
+    }
+    .text-left{
+      text-align:left;
+    }
+
+    .text-right{
+      text-align:right;
+    }
+
+    .text-justify{
+      text-align:justify;
+    }
+
+    img{
+      width: 224px;
+      height: 224px;
+      max-width: 224px;
+      max-height: 224px;
+    }
+    .icon{
+      font-size: 24px;
+    }
+
+    .icon-btn{
+      position: relative;
+      top:2.5px;
+    }
+
+    .btn{
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 1em;
+      transition: .3s;
+      background: none;
+      outline:none;
+    }
+
+    .btn-primary{
+      background: var(--primary);
+    }
+    .btn-outline-primary{
+      border: solid 1px var(--primary);
+      color:var(--primary);
+    }
+    .btn-outline-primary:hover{
+      background: var(--primary);
+      color: white;
+    }
+    .btn-outline-primary:hover *{
+      color:white;
+    }
+
+    .bg-primary{ background:var(--primary) }
+
+    .text-primary{ color:var(--primary) }
+    .text-danger{ color:var(--danger) }
+
+    ul.list-style-none{
+      list-style: none;
+    }
+
+    ul li.li::before{
+      font-family: arial;
+      content: "\2022";
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    ul li.li-red::before{
+      color: red; /* Change the color */
+    }
+
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+      /* background-color: DodgerBlue; */
+      padding:10px
+    }
+
+    .flex-container .col {
+      padding: 8px;
+    }
+
+    .flex-container .col-1{
+      width: 8.333333333333333%;
+    }
+
+    .flex-container .col-2{
+      width: 16.66666666666667%;
+    }
+
+    .flex-container .col-3{
+      width: 25%;
+    }
+
+    .flex-container .col-4{
+      width: 33.33333333333333%;
+    }
+
+    .flex-container .col-5{
+      width: 41.66666666666667%;
+    }
+
+    .flex-container .col-6{
+      width: 50%;
+    }
+
+    .flex-container .col-7{
+      width: 58.33333333333333%;
+    }
+
+    .flex-container .col-8{
+      width: 66.66666666666666%;
+    }
+
+    .flex-container .col-9{
+      width: 75%;
+    }
+
+    .flex-container .col-10{
+      width: 83.33333333333333%;
+    }
+
+    .flex-container .col-11{
+      width: 91.66666666666666%;
+    }
+
+    .flex-container .col-12{
+      width: 100%!important;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
     <title>Alejandro Villatoro</title>
+    <link rel="shortcut icon" href="/img/logo.png" />
+
+
   </head>
-  <body>
-    <h1>Hola mundo</h1>
-  </body>
+
+<body>
+
+  <header>
+    <a href="#home" style="position:absolute;border:solid 1px gray;border-radius:50%"><img src="./img/logo.png" style="width:32px;height:32px;margin:8px" alt=""></a>
+    <input type='checkbox' id='toggle' style='display:none;' />
+    <label class='toggle-btn toggle-btn__cross' for='toggle'>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav style="z-index:12">
+      <ul>
+        <li><a href="#home" onclick="document.getElementById('toggle').checked = false">Inicio</a></li>
+        <li><a href="#about" onclick="document.getElementById('toggle').checked = false">Perfil</a></li>
+        <li><a href="#education" onclick="document.getElementById('toggle').checked = false">Educación</a></li>
+        <li><a href="#quotes" onclick="document.getElementById('toggle').checked = false">Citas</a></li>
+        <li><a href="#contact" onclick="document.getElementById('toggle').checked = false">Contáctame</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <div id="home" class='wrap'>
+    <figure>
+      <img src="./img/avatar.jpg" style="width:300px;height:300px" class="animate__animated animate__backInDown" alt="Avatar">
+    </figure>
+    <div class='title'>
+        <div class="animate__animated" style="opacity:0">ALEJANDRO VILLATORO</div>
+        <small style="font-size:16px; position: relative; top: -16px">CEO &amp; Founder of <a href="http://afervm.cf" target="_blank">Afervm</a></small>
+        <script> setTimeout(() => { document.querySelector('.title div').classList.add("animate__backInUp") }, 1000); </script>
+    </div>
+    <div class="w3-center social">
+      <a href="http://www.twitter.com/ale_villatoro7" rel="noreferrer" target="_blank" title="Twitter" class="btn btn-outline-primary animate__animated" ><i class="fa fa-twitter icon icon-btn text-primary"></i> Follow</a>
+    </div>
+    <script> setTimeout(() => { document.querySelector("[title='Twitter']").classList.add("animate__rotateIn") }, 2000); </script>
+
+    <div class="content">
+      <p>Desarrollador de software, uniendo esfuerzos para crear un mundo más competitivo con o sin certificados, así mismo trata de generar software útil. Un día espera hacer algo que cambie la forma común del internet.</p>
+    </div>
+  </div>
+  <hr><br>
+
+  <div id="about" class='flex-container'>
+
+    <div class="col col-4" style="transition:none!important;text-align:center;font-size:1.2em;border:solid 2px gray;border-radius:1em">
+      <div class='title'>Sobre mí <i class="fa fa-address-card-o text-primary"></i></div>
+      <div style="margin:4px">
+        <img src="./img/avatar2.jpg" alt="Avatar"/>
+      </div>
+      <div style="margin:18px">
+        <div>Alejandro Fernando Villatoro</div>
+        <div>20 años</div>
+        <div>
+        <img style="width:42px;height: 22px;border-radius:4px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAABLCAMAAABKveUfAAAAaVBMVEULL4P///8AAHfu7/QAAHLi5O3Kzt4AFnz5+vzx8/etsMq0ts6LkbYACnmprcgiNIUAHX0AIX55g69ncaN6f6uWmbsvQIvZ3OhMXJmco8KDiLGBjLXAw9aPl7obOYkAAGxaYZtGU5QAKIB2FEuyAAABRUlEQVRoge3Ya2+CMBgF4EJbkftFHCpus/7/H7m57AsDx7uTMtlynsQv5CQ9aW0rKkVEREREREQkEK6TCtYJ7LVdIDkA9uoXSA5gveIw9p4cAnrFSZrlfVro2aQu0j7P0gSohszXpoxUVW0kyapSUSlJfgWto1V1OD9bNzqslUWGgHqdzbNJRcnkPXlGhoB6NTbQu/HjiYnZ6cA2yBBIr3tH0ssP89/xeN7bV+ibNM1XL91eXO0urWw7zPM2X9umVnUD3jpj/tbRRmHkbyHBXhNH5d5ZtxclJcBeT+NHxednPimB9epM5z05BPTSBxOpyDjBve0+kgdgk0LzVVxVdRQlj5W6TizuPOzezkvh8nSmzH/v3s5afWpFyeak2wwZAup12/uyXwnnADwp/tn70OJW2+vRL9Z3PPpvCCIiIiIiIvob3gBQPBjYLI1RPAAAAABJRU5ErkJggg==" />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col col-7" style="padding:12px;font-size:1.2em;align-items: center;display:flex">
+      <div>
+        <p style="text-align:justify">
+          Soy un desarrollador web, amo a Dios por encima de todo. Me encanta la disciplina y el orden, también abogar por la calidad. Estoy en contra de la injusticia. Me gusta pasar tiempo arreglando detalles minimos y optimizando mis aplicaciones web.
+          Me gusta enseñar de forma estricta. Para mí todos los errores son válidos, me encantan los disparates para fortalecer mi experiencia y aprendizaje.
+        </p>
+        <p>
+          <h2 style="font-family:inherit">Me encanta...<i class="fa fa-heart-o" style="color:red"></i></h2>
+          <ul class="list-style-none">
+            <li class="li li-red">Las hamburguesas</li>
+            <li class="li li-red">La Música</li>
+            <li class="li li-red">Lo Natural</li>
+            <li class="li li-red">UI/UX Amigables</li>
+            <li class="li li-red">Leer</li>
+            <li class="li li-red">Tiempo solo</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <div class="w3-row-padding">
+
+      <div class="w3-third col">
+
+        <div id="education" class="w3-black w3-text-grey w3-card-4">
+
+          <div class="w3-container">
+            <h2 class="w3-text-grey w3-padding-16" style="font-family:inherit"><i class="fa fa-code	 fa-fw w3-margin-right text-primary"></i>Habilidades</h2>
+            <p>JSON</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:100%">100%</div>
+            </div>
+            <p>HTML5 / CSS3 / JavaScript</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:90%">90%</div>
+            </div>
+            <p>Ajax</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:86%">86%</div>
+            </div>
+            <p>PHP / MySQL</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:80%">
+                <div class="w3-center w3-text-white">80%</div>
+              </div>
+            </div>
+            <p>Bootstrap</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:79%">
+                <div class="w3-center w3-text-white">79%</div>
+              </div>
+            </div>
+            <p>Object Orientated Programming</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:76%">76%</div>
+            </div>
+            <p>jQuery</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:70%">
+                <div class="w3-center w3-text-white">70%</div>
+              </div>
+            </div>
+            <p>Social Manager</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:54%">54%</div>
+            </div>
+            <p>Photoshop / Ilustrator</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:50%">50%</div>
+            </div>
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right text-primary"></i>Idiomas</b></p>
+            <p>Español</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge bg-primary" style="height:24px;width:100%"></div>
+            </div>
+            <p>English</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge bg-primary" style="height:24px;width:10%"></div>
+            </div>
+            <br>
+          </div>
+        </div><br>
+
+      </div>
+
+      <div class="w3-twothird col">
+
+        <div class="w3-container w3-card w3-black">
+          <h2 class="w3-text-grey w3-padding-16 " style="font-family:inherit"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge text-primary"></i>Certificados</h2>
+
+
+          <ul class="timeline">
+
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" style="width:88px;height:28px" title="Google" alt="Google"></span>
+                  <!-- <span class="time-wrapper"><span class="time">2020</span></span> -->
+                </div>
+                <div><span class="desc">Desarrollo y Diseño Web</span></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag"><img src="https://fundacioncarlosslim.org/wp-content/themes/fundacion2019/images/logo_fundacion3.png" style="width:88px;height:32px;filter: contrast(0.5);" title="Fundación Carlos Slim" alt="Fundación Carlos Slim"></span>
+                  <!-- <span class="time-wrapper"><span class="time">2020</span></span> -->
+                </div>
+                <div><span class="desc">Sistemas Informáticos</span></div>
+                <div><span class="desc">Seguridad informática</span></div>
+                <div><span class="desc">POO</span></div>
+              </div>
+            </li>
+
+
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag"><img src="https://base.imgix.net/files/base/ebm/asumag/image/2019/05/asumag_9440_stanford_university_logo_png_1200.png?auto=format&fit=crop&h=432&w=768" style="width:88px;height:42px;margin-top:8px" title="Stanford University" alt="Stanford University"></span>
+                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
+                </div>
+                <div><span class="desc">Ciencias de la computación</span></div>
+              </div>
+            </li>
+
+
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag"><img src="https://d3puay5pkxu9s4.cloudfront.net/pages/edutin-isotype-positive.svg" style="width:auto;height:22px;margin-right:4px" title="Edutin Academy" alt="Edutin Academy"> Edutin Academy</span>
+                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
+                </div>
+                <div><span class="desc">Desarrollo y Diseño Web</span></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag"><img src="https://s3sf.tmimgcdn.com/af03eb7d785ce2f17c5ace599f051fce.svg" style="filter:contrast(.5);width:auto;height:22px;margin-right:4px" title="Template Monster" alt="Template Monster"> TemplateMonster</span>
+                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
+                </div>
+                <div><span class="desc">HTML / CSS</span></div>
+              </div>
+            </li>
+
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag"><img src="https://es.khanacademy.org/favicon.ico?logo" style="width:auto;height:22px;" title="Khan Academy" alt="Khan Academy"> Khan Academy</span>
+                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
+                </div>
+                <div><span class="desc">HTML / CSS / JavaScript</span></div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div id="quotes" class='flex-container'>
+    <div class="col col-12" style="padding:12px;font-size:1.2em;align-items: center;display:flex;min-width: 200px;max-width: 800px;margin: 0 auto;padding: 14px;">
+      <div>
+        <h2 class="w3-text-grey w3-padding-16 " style="font-family:inherit"><i class="fa fa-pencil fa-fw w3-margin-right w3-xxlarge text-primary"></i>Citas</h2>
+        <div class="quote">
+          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
+          <cite>Ama hoy, perdona hoy, vive tu vida hoy. Por si no hay mañana.</cite>
+          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
+          <p class="text-right">- S. Hernandez.</p>
+        </div>
+        <div class="quote">
+          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
+          <cite>La ignorancia es como la falta de oxigeno.</cite>
+          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
+          <p class="text-justify">Todos somos ignorantes. Nadie lo sabe todo, sin embargo, día a día nos topamos con diferentes personalidades con las cuales compartimos y por cualquier comentario podemos quedar avergonzados. Leyendo fortalecemos nuestra capacidad mental, nadie podrá engañarnos fácilmente e incluso podremos distribuir información interesante a los demás.</p>
+        </div>
+        <hr>
+        <div class="quote">
+          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
+          <cite>Si de una forma no funcionó, se intenta con otra.</cite>
+          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
+          <p class="text-justify">En esta vida hay muchas opciones para ejecutar algo. Desistir es una opción, pero NO es aceptable.</p>
+        </div>
+        <hr>
+        <div class="quote">
+          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
+          <cite>Una idea no vale nada.</cite>
+          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
+          <p class="text-justify">Todo somos capaces de generar ideas, no todos inician y se mantienen en pie. Date cuenta que una idea no vale nada: lucha por transformar tu idea en un producto real.</p>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<div style="margin-top:14px;background:rgba(255, 255, 255, 0.1);padding: 14px;border-radius:1em;text-align:center">
+    <div style="margin-bottom:14px">Copiado? Te inspiraste? O simplemente te gusta el sitio web? No hay problema, solo cómprame una hamburguesa🍔 y hazme feliz.</div>
+            <a href="https://www.paypal.com/donate/?cmd=_donations&amp;business=pm7609460%40gmail.com&amp;item_name=Donation&amp;item_number=WFD-1001&amp;no_shipping=1&amp;no_note=1&amp;tax=0&amp;currency_code=USD&amp;lc=US&amp;bn=PP_DonationsBF&amp;target=_blank&amp;Z3JncnB0=&amp;locale.x=es_ES" class="btn btn-outline-warning" rel="noreferrer" rel="noreferrer" target="_blank" style="background: darkgoldenrod;color: white;padding:8px 22px;">Donar</a>
+
+    <div style="margin-top:14px">
+        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" onclick="window.location = document.querySelector('div a[href*=donate]').href" style="height:62px;width:auto;border-radius:1em" title="Puedes donar con cualquier tarjeta">
+    </div>
+</div>
+
+<hr class="w3-grey">
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    setTimeout(function(){
+      document.getElementById("msg").focus();
+    }, 100);
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+<footer id="contact" class="w3-container w3-center w3-margin-top">
+  <p>Búscame en...</p>
+  <a class="fa fa-facebook-official w3-hover-opacity icon" style="padding:4px;text-decoration:none" rel="noreferrer" target="_blank" href="https://www.facebook.com/AleVillatoroM/"></a>
+  <a class="fa fa-instagram w3-hover-opacity icon" style="padding:4px;text-decoration:none" rel="noreferrer" target="_blank" href="https://www.instagram.com/AleVillatoroM/"></a>
+  <a class="fa fa-twitter w3-hover-opacity icon" style="padding:4px;text-decoration:none" rel="noreferrer" target="_blank" href="https://www.twitter.com/AleVillatoroM"></a>
+
+
+  <p>Powered by &nbsp;<a href="http://www.afervm.cf/" rel="noreferrer" target="_blank"><img src="./img/afervm.png" alt="Afervm" style="width:92px;height:auto;filter:contrast(.5)"> </a></p>
+</footer>
+
+</body>
 </html>
