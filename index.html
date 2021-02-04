@@ -1,1086 +1,804 @@
 <!DOCTYPE html>
-<html lang="es-HN">
+<html lang="es-HN" dir="ltr">
   <head>
-    <meta property='og:url' content='https://fervillatoro.github.io/' />
-    <meta property='og:title' content='Alejandro Villatoro' />
-    <meta property='og:description' content='Alejandro Villatoro, Desarrollador Web.' />
-    <meta property='og:image' content='https://fervillatoro.github.io/avatar.jpg' />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-    <meta property="description" content="Alejandro Villatoro, Desarrollador Web" />
-    <meta property="keywords" content="alejandro villatoro, fer, villa, villatoro, fernando villa, alejandro, f, fenix, hn, honduras" />
-
-    <link rel="canonical" href="https://fervillatoro.github.io/" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="utf-8">
+    <title>Alejandro Villatoro</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style media="screen">
-    /* SCROLL */
-    ::-webkit-scrollbar{width: 12px;background-color: #F5F5F5;} ::-webkit-scrollbar-button{ display: none } ::-webkit-scrollbar-track{ background-color: #F5F5F5;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); } ::-webkit-scrollbar-track-piece{ background: rgb(45, 45, 45) } ::-webkit-scrollbar-thumb{ background-color: #555;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); } ::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-thumb:hover{ background: radial-gradient(black, transparent); } ::-webkit-scrollbar-corner{ background: red } ::-webkit-resizer{ background: red } html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-
-    /* MENU */
-    :root {
-      font-size: 16px;
-    }
-
-    * {
-      box-sizing: border-box;
-      /* font-family: 'MuseoModerno', cursive, "Helvetica", "sans-serif"; */
-      /* color: #555; */
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #151b1d;
-    }
-
-    main {
-      margin: 80px auto;
-      margin-top: 0;
-      padding: 10px;
-    }
-    main .wrap {
-      padding: 40px 0px;
-      color: gray;
-
-      /* background-color: #fff; */
-    }
-
-    main figure{
-      text-align: center;
-    }
-    img[src*="avatar"]{
-      border-radius: 50%;
-      border: solid 4px gray;
-      /* animation-name: animShowOpacity;
-      animation-duration: 2s; */
-    }
-
-    main .content{
-      min-width: 200px;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 14px;
-    }
-    @media only screen and (max-width:365px){
-      img[src*="avatar"]{
-        width: 100%!important;
-      }
-
-      main .title{
-        font-size: 24px!important;
-        margin-bottom:12px!important;
-      }
-    }
-
-    @keyframes animShowOpacity {
-      0%   {opacity: 0;}
-      25%   {opacity: .4;}
-      50%   {opacity: .6;}
-      75%   {opacity: .8;}
-      100%   {opacity: 1;}
-    }
-
-    main .title {
-      font-size: 2em;
-      text-align: center;
-      margin: 20px auto 5px;
-      text-transform: uppercase;
-      color: gray;
-      /* animation-name: animShowOpacity;
-      animation-duration: 3s; */
-    }
-
-    main .content *{
-      font-size: 1.2em;
-      text-align: justify;
-    }
-
-
-    header nav {
-      background-color: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      visibility: hidden;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-    }
-    header nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      position: absolute;
-      left: 50%;
-      top: 170px;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-    }
-    header nav ul li {
-      -webkit-transform: translateY(50px);
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    header nav ul li a {
-      display: block;
-      font-size: 2em;
-      text-decoration: none;
-      padding: 10px 0;
-      text-align: center;
-      color: #fff;
-      font-weight: bold;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
-    header nav ul li a:hover {
-      color: #e84a5f;
-    }
-
-    .toggle-btn {
-      display: block;
-      position: fixed;
-      z-index: 13;
-      right: 25px;
-      top: 10px;
-      cursor: pointer;
-    }
-    .toggle-btn .bar {
-      width: 30px;
-      height: 2px;
-      margin: 7px auto;
-      background-color: #fff;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
-    }
-    .toggle-btn .bar:nth-child(2) {
-      width: 20px;
-    }
-
-    #toggle:checked ~ nav {
-      opacity: 1;
-      visibility: visible;
-    }
-    #toggle:checked ~ nav ul {
-      top: 70px;
-    }
-    #toggle:checked ~ nav ul li {
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
-      opacity: 1;
-    }
-    #toggle:checked ~ nav ul li:nth-child(1) {
-      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
-      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
-    }
-    #toggle:checked ~ nav ul li:nth-child(2) {
-      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
-      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
-    }
-    #toggle:checked ~ nav ul li:nth-child(3) {
-      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
-      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
-    }
-    #toggle:checked ~ nav ul li:nth-child(4) {
-      -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
-      transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
-    }
-    #toggle:checked + label.toggle-btn .bar {
-      background-color: red;
-    }
-    #toggle:checked + label.toggle-btn .bar:nth-child(2) {
-      -webkit-transform: translateX(50px);
-      transform: translateX(50px);
-      opacity: 0;
-    }
-    #toggle:checked + label.toggle-btn .bar:nth-child(1) {
-      -webkit-transform: translateY(10px) rotate(45deg);
-      transform: translateY(10px) rotate(45deg);
-    }
-    #toggle:checked + label.toggle-btn .bar:nth-child(3) {
-      -webkit-transform: translateY(-8px) rotate(-45deg);
-      transform: translateY(-8px) rotate(-45deg);
-    }
-
-
-    /* TIMELINE */
-
-
-    .timeline {
-      position: relative;
-      width: 660px;
-      margin: 0 0 0 -72px;
-      margin-top: 20px;
-      padding: 1em 0;
-      list-style-type: none;
-    }
-
-    .timeline:before {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      content: ' ';
-      display: block;
-      width: 6px;
-      height: 100%;
-      margin-left: -3px;
-      background: rgb(80,80,80);
-      background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-      background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-      background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-      background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-      background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-
-      z-index: 5;
-    }
-
-    .timeline li {
-      padding: 1em 0;
-    }
-
-    .timeline li:after {
-      content: "";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden;
-    }
-
-    .direction-l {
-      position: relative;
-      width: 300px;
-      float: left;
-      text-align: right;
-    }
-
-    .direction-r {
-      position: relative;
-      width: 300px;
-      float: right;
-    }
-
-    .flag-wrapper {
-      position: relative;
-      display: inline-block;
-
-      text-align: center;
-    }
-
-    .flag {
-      position: relative;
-      display: inline;
-      /* background: rgb(248,248,248); */
-      padding: 6px 10px;
-      border-radius: 5px;
-
-      font-weight: 600;
-      text-align: left;
-    }
-
-    .direction-l .flag {
-      -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-      -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-      box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    }
-
-    .direction-r .flag {
-      -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-      -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-      box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    }
-
-    .direction-l .flag:before,
-    .direction-r .flag:before {
-      position: absolute;
-      top: 50%;
-      right: -40px;
-      content: ' ';
-      display: block;
-      width: 18px;
-      height: 18px;
-      margin-top: -10px;
-      background: #fff;
-      border-radius: 10px;
-      border: 4px solid rgb(255,80,80);
-      z-index: 10;
-    }
-
-    .direction-r .flag:before {
-      left: -40px;
-    }
-
-    .direction-l .flag:after {
-      content: "";
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      height: 0;
-      width: 0;
-      margin-top: -8px;
-      border: solid transparent;
-      border-left-color: rgb(248,248,248);
-      border-width: 8px;
-      pointer-events: none;
-    }
-
-    .direction-r .flag:after {
-      content: "";
-      position: absolute;
-      right: 100%;
-      top: 50%;
-      height: 0;
-      width: 0;
-      margin-top: -8px;
-      border: solid transparent;
-      border-right-color: rgb(248,248,248);
-      border-width: 8px;
-      pointer-events: none;
-    }
-
-    .time-wrapper {
-      display: inline;
-
-      line-height: 1em;
-      font-size: 0.66666em;
-      color: rgb(250,80,80);
-      vertical-align: middle;
-    }
-
-    .direction-l .time-wrapper {
-      float: left;
-    }
-
-    .direction-r .time-wrapper {
-      float: right;
-    }
-
-    .time {
-      display: inline-block;
-      padding: 4px 6px;
-      /* background: rgb(248,248,248); */
-    }
-
-    .desc {
-      margin: 1em 0.75em 0 0;
-
-      font-size: 0.77777em;
-      font-style: italic;
-      line-height: 1.5em;
-    }
-
-    .direction-r .desc {
-      margin: 1em 0 0 0.75em;
-    }
-
-    /* ================ Timeline Media Queries ================ */
-
-    @media screen and (max-width: 990px) {
-
-      .timeline {
+      html, body {
+        height: 100%;
         width: 100%;
-        padding: 4em 0 1em 0;
-
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
       }
 
-      .timeline li {
-        padding: 2em 0;
+      body {
+        background: black;
+        color: white;
       }
 
-      .direction-l,
-      .direction-r {
-        float: none;
+      #villa-root{
+        --url-bg-bio: url(/img/fondo-bio.jpg);
+        --url-bg-contact: url(/img/fondo-contact.jpg);
+      }
+
+      #particle-canvas {
         width: 100%;
-
-        text-align: center;
+        height: 100%;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        z-index: 1;
       }
 
-      .flag-wrapper {
-        text-align: center;
-      }
-
-      .flag {
-        background: rgb(255,255,255);
-        z-index: 15;
-      }
-
-      .direction-l .flag:before,
-      .direction-r .flag:before {
+      .container, .container-fluid {
         position: absolute;
-        top: -30px;
+        top: 50%;
         left: 50%;
-        content: ' ';
-        display: block;
-        width: 18px;
-        height: 18px;
-        margin-left: -9px;
-        background: #fff;
-        border-radius: 10px;
-        border: 4px solid rgb(255,80,80);
-        z-index: 10;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #FFF;
+        font-weight: normal;
+        width: 100%;
       }
 
-      .direction-l .flag:after,
-      .direction-r .flag:after {
+      #icon-down{
+        position: relative;
+        -webkit-animation: sdb04 2s infinite;
+        animation: sdb04 2s infinite;
+      }
+
+      #icon-down:hover{
+        opacity: 0.5;
+      }
+
+      @keyframes sdb04 {
+        10% {
+          top: 0px;
+        }
+        20% {
+          top: 8px;
+        }
+        40% {
+          top: 0px;
+        }
+        60% {
+          top: 8px;
+        }
+        80% {
+          top: 0px;
+        }
+      }
+
+      [data-view]{
+        z-index: 21;
+      }
+
+      /* animacion para cambiar de vista */
+      @keyframes changeViewAnimation {
+        0% {
+          opacity: 0;
+        }
+        80% {
+          opacity: 1;
+        }
+      }
+
+      /* menu */
+      .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a,
+      a:visited,
+      a:hover,
+      a:active {
+        font-weight: bold;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .outer-menu {
+        --top: 5px;
+        position: fixed;
+        top: var(--top);
+        right: calc( 60px + var(--top) );
+        z-index: 25;
+      }
+      .outer-menu .checkbox-toggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+      }
+      .outer-menu .checkbox-toggle:checked + .hamburger > div {
+        transform: rotate(135deg);
+      }
+      .outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+      .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      .outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+        opacity: 0;
+      }
+      .outer-menu .checkbox-toggle:checked ~ .menu {
+        pointer-events: auto;
+        visibility: visible;
+      }
+      .outer-menu .checkbox-toggle:checked ~ .menu > div {
+        transform: scale(1);
+        transition-duration: 0.75s;
+      }
+      .outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+        opacity: 1;
+        transition: opacity 0.4s ease 0.4s;
+      }
+      .outer-menu .checkbox-toggle:hover + .hamburger {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+      }
+      .outer-menu .hamburger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 0.5em 1em;
+        box-shadow: black 0px 0px 8px!important;
+        background: rgba(33, 150, 243, 0.75);
+        cursor: pointer;
+        transition: box-shadow 0.4s ease;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .hamburger > div {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: #fefefe;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .hamburger > div:before,
+      .outer-menu .hamburger > div:after {
         content: "";
         position: absolute;
-        left: 50%;
-        top: -8px;
-        height: 0;
-        width: 0;
-        margin-left: -8px;
-        border: solid transparent;
-        border-bottom-color: rgb(255,255,255);
-        border-width: 8px;
+        z-index: 1;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+        transition: all 0.4s ease;
+      }
+      .outer-menu .hamburger > div:after {
+        top: 10px;
+      }
+      .outer-menu .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         pointer-events: none;
+        visibility: hidden;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        outline: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-
-      .time-wrapper {
+      .outer-menu .menu > div {
+        width: 200vw;
+        height: 200vw;
+        color: #fefefe;
+        background: rgb(0 0 0 / 90%);
+        border-radius: 50%;
+        transition: all 0.4s ease;
+        flex: none;
+        transform: scale(0);
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        overflow-y: auto;
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-menu .menu > div > div > ul {
+        list-style: none;
+        padding: 0 1em;
+        margin: 0;
         display: block;
+        max-height: 100vh;
+      }
+      .outer-menu .menu > div > div > ul > li {
+        padding: 0;
+        margin: 1em;
+        font-size: 24px;
+        display: block;
+      }
+      .outer-menu .menu > div > div > ul > li > a {
         position: relative;
-        margin: 4px 0 0 0;
-        z-index: 14;
+        display: inline;
+        cursor: pointer;
+        transition: color 0.4s ease;
+      }
+      .outer-menu .menu > div > div > ul > li > a:hover {
+        color: #e5e5e5;
+      }
+      .outer-menu .menu > div > div > ul > li > a:hover {
+        text-shadow: black 2px 2px 2px;
+      }
+      .outer-menu .menu > div > div > ul > li > a:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: -0.15em;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #e5e5e5;
+        transition: width 0.4s ease;
       }
 
-      .direction-l .time-wrapper {
-        float: none;
-      }
-
-      .direction-r .time-wrapper {
-        float: none;
-      }
-
-      .desc {
-        position: relative;
-        margin: 1em 0 0 0;
-        /* padding: 1em; */
+      /* skills */
+      .item-skills{
+        width: 110px;
+        height: 110px;
+        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         background: black;
-        -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-        -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-        box-shadow: 0 0 1px rgba(0,0,0,0.20);
-
-        z-index: 15;
       }
-
-      .direction-l .desc,
-      .direction-r .desc {
-        position: relative;
-        margin: 1em 1em 0 1em;
-        /* padding: 1em; */
-
-        z-index: 15;
-      }
-
-    }
-
-    @media screen and (min-width: 400px ?? max-width: 660px) {
-
-      .direction-l .desc,
-      .direction-r .desc {
-        margin: 1em 4em 0 4em;
-      }
-
-    }
-
-    @media only screen and (max-width: 990px) {
-
-      .col{
-        width: 100%!important;
-      }
-      .timeline{
-        margin-left: 0;
-      }
-    }
-
-
-    /* CHAT POPUP */
-    .open-button {
-      background-color: #555;
-      color: white;
-      border: none;
-      cursor: pointer;
-      opacity: 0.8;
-      position: fixed;
-      bottom: 23px;
-      right: 28px;
-      padding: 10px;
-      font-size: 24px;
-      border-radius: 50%;
-    }
-
-    /* The popup chat - hidden by default */
-    .chat-popup {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      right: 15px;
-      /* border: 3px solid #f1f1f1; */
-      z-index: 9;
-    }
-
-    /* Add styles to the form container */
-    .form-container {
-      width: 300px;
-      padding: 10px;
-      background-color: #242526;
-      border-radius: 1em;
-
-    }
-
-    /* Full-width textarea */
-    .form-container textarea {
-      width: 100%;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      border: none;
-      background: #3A3B3C;
-      resize: none;
-      min-height: 100px;
-      border-radius: 1em;
-    }
-
-    .form-container textarea:focus{
-      outline:none;
-    }
-
-    /* Set a style for the submit/send button */
-    .form-container .btn {
-      cursor: pointer;
-      width: 100%;
-      margin-bottom:10px;
-      opacity: 0.8;
-    }
-
-    /* Add a red background color to the cancel button */
-    .form-container .cancel {
-      background-color: red;
-    }
-
-    /* Add some hover effects to buttons */
-    .form-container .btn:hover, .open-button:hover {
-      opacity: 1;
-    }
-
-
-
-
-    /* CSS GENERAL */
-    :root{
-      --body:#010101;
-      --primary:rgb(27, 100, 159);
-      --danger:rgb(121, 32, 32);
-    }
-
-    *{
-      font-family: 'Montserrat', "Helvetica", arial;
-    }
-    html,body{
-      background:var(--body);
-      scroll-behavior: smooth;
-      height: 100%;
-      overflow-x: hidden;
-    }
-    *{
-      color:gray;
-    }
-
-    .quote{
-      text-align:center;
-    }
-    .fa-quote-right, .fa-quote-left{
-      font-size: 1.4em;
-    }
-    .text-left{
-      text-align:left;
-    }
-
-    .text-right{
-      text-align:right;
-    }
-
-    .text-justify{
-      text-align:justify;
-    }
-
-    img{
-      width: 224px;
-      height: 224px;
-      max-width: 224px;
-      max-height: 224px;
-    }
-    .icon{
-      font-size: 24px;
-    }
-
-    .icon-btn{
-      position: relative;
-      top:2.5px;
-    }
-
-    .btn{
-      padding: 8px;
-      text-decoration: none;
-      border-radius: 1em;
-      transition: .3s;
-      background: none;
-      outline:none;
-    }
-
-    .btn-primary{
-      background: var(--primary);
-    }
-    .btn-outline-primary{
-      border: solid 1px var(--primary);
-      color:var(--primary);
-    }
-    .btn-outline-primary:hover{
-      background: var(--primary);
-      color: white;
-    }
-    .btn-outline-primary:hover *{
-      color:white;
-    }
-
-    .bg-primary{ background:var(--primary) }
-
-    .text-primary{ color:var(--primary) }
-    .text-danger{ color:var(--danger) }
-
-    ul.list-style-none{
-      list-style: none;
-    }
-
-    ul li.li::before{
-      font-family: arial;
-      content: "\2022";
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-
-    ul li.li-red::before{
-      color: red; /* Change the color */
-    }
-
-    .flex-container {
-      display: flex;
-      flex-flow: row wrap;
-      /* background-color: DodgerBlue; */
-      padding:10px
-    }
-
-    .flex-container .col {
-      padding: 8px;
-    }
-
-    .flex-container .col-1{
-      width: 8.333333333333333%;
-    }
-
-    .flex-container .col-2{
-      width: 16.66666666666667%;
-    }
-
-    .flex-container .col-3{
-      width: 25%;
-    }
-
-    .flex-container .col-4{
-      width: 33.33333333333333%;
-    }
-
-    .flex-container .col-5{
-      width: 41.66666666666667%;
-    }
-
-    .flex-container .col-6{
-      width: 50%;
-    }
-
-    .flex-container .col-7{
-      width: 58.33333333333333%;
-    }
-
-    .flex-container .col-8{
-      width: 66.66666666666666%;
-    }
-
-    .flex-container .col-9{
-      width: 75%;
-    }
-
-    .flex-container .col-10{
-      width: 83.33333333333333%;
-    }
-
-    .flex-container .col-11{
-      width: 91.66666666666666%;
-    }
-
-    .flex-container .col-12{
-      width: 100%!important;
-    }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-
-    <title>Alejandro Villatoro</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-
-
   </head>
-
-<body>
-
-  <header>
-    <a href="#home" style="position:absolute;border:solid 1px gray;border-radius:50%"><img src="https://fervillatoro.github.io/logo.png" style="width:32px;height:32px;margin:8px" alt=""></a>
-    <input type='checkbox' id='toggle' style='display:none;' />
-    <label class='toggle-btn toggle-btn__cross' for='toggle'>
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </label>
-    <nav style="z-index:12">
-      <ul>
-        <li><a href="#home" onclick="document.getElementById('toggle').checked = false">Inicio</a></li>
-        <li><a href="#about" onclick="document.getElementById('toggle').checked = false">Perfil</a></li>
-        <li><a href="#education" onclick="document.getElementById('toggle').checked = false">Educación</a></li>
-        <li><a href="#quotes" onclick="document.getElementById('toggle').checked = false">Citas</a></li>
-        <li><a href="#contact" onclick="document.getElementById('toggle').checked = false">Contáctame</a></li>
-      </ul>
-    </nav>
-  </header>
-
-<main>
-  <div id="home" class='wrap'>
-    <figure>
-      <img src="https://fervillatoro.github.io/avatar.jpg" style="width:300px;height:300px" class="animate__animated animate__backInDown" alt="Avatar">
-    </figure>
-    <div class='title'>
-        <div class="animate__animated" style="opacity:0">ALEJANDRO VILLATORO</div>
-        <small style="font-size:16px; position: relative; top: -16px">CEO &amp; Founder of <a href="http://afervm.cf" target="_blank">Afervm</a></small>
-        <script> setTimeout(() => { document.querySelector('.title div').classList.add("animate__backInUp") }, 1000); </script>
-    </div>
-    <div class="w3-center social">
-      <a href="http://www.twitter.com/ale_villatoro7" rel="noreferrer" target="_blank" title="Twitter" class="btn btn-outline-primary animate__animated" ><i class="fa fa-twitter icon icon-btn text-primary"></i> Follow</a>
-    </div>
-    <script> setTimeout(() => { document.querySelector("[title='Twitter']").classList.add("animate__rotateIn") }, 2000); </script>
-
-    <div class="content">
-      <p>Desarrollador de software, uniendo esfuerzos para crear un mundo más competitivo con o sin certificados, así mismo trata de generar software útil. Un día espera hacer algo que cambie la forma común del internet.</p>
-    </div>
-  </div>
-  <hr><br>
-
-  <div id="about" class='flex-container'>
-
-    <div class="col col-4" style="transition:none!important;text-align:center;font-size:1.2em;border:solid 2px gray;border-radius:1em">
-      <div class='title'>Sobre mí <i class="fa fa-address-card-o text-primary"></i></div>
-      <div style="margin:4px">
-        <img src="https://fervillatoro.github.io/avatar2.jpg" alt="Avatar"/>
+  <body>
+    <div class="outer-menu">
+      <input class="checkbox-toggle" type="checkbox" />
+      <div class="hamburger">
+        <div></div>
       </div>
-      <div style="margin:18px">
-        <div>Alejandro Fernando Villatoro</div>
-        <div>20 años</div>
+      <div class="menu">
         <div>
-        <img style="width:42px;height: 22px;border-radius:4px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAABLCAMAAABKveUfAAAAaVBMVEULL4P///8AAHfu7/QAAHLi5O3Kzt4AFnz5+vzx8/etsMq0ts6LkbYACnmprcgiNIUAHX0AIX55g69ncaN6f6uWmbsvQIvZ3OhMXJmco8KDiLGBjLXAw9aPl7obOYkAAGxaYZtGU5QAKIB2FEuyAAABRUlEQVRoge3Ya2+CMBgF4EJbkftFHCpus/7/H7m57AsDx7uTMtlynsQv5CQ9aW0rKkVEREREREQkEK6TCtYJ7LVdIDkA9uoXSA5gveIw9p4cAnrFSZrlfVro2aQu0j7P0gSohszXpoxUVW0kyapSUSlJfgWto1V1OD9bNzqslUWGgHqdzbNJRcnkPXlGhoB6NTbQu/HjiYnZ6cA2yBBIr3tH0ssP89/xeN7bV+ibNM1XL91eXO0urWw7zPM2X9umVnUD3jpj/tbRRmHkbyHBXhNH5d5ZtxclJcBeT+NHxednPimB9epM5z05BPTSBxOpyDjBve0+kgdgk0LzVVxVdRQlj5W6TizuPOzezkvh8nSmzH/v3s5afWpFyeak2wwZAup12/uyXwnnADwp/tn70OJW2+vRL9Z3PPpvCCIiIiIiIvob3gBQPBjYLI1RPAAAAABJRU5ErkJggg==" />
-        </div>
-
-      </div>
-    </div>
-
-    <div class="col col-7" style="padding:12px;font-size:1.2em;align-items: center;display:flex">
-      <div>
-        <p style="text-align:justify">
-          Soy un desarrollador web, amo a Dios por encima de todo. Me encanta la disciplina y el orden, también abogar por la calidad. Estoy en contra de la injusticia. Me gusta pasar tiempo arreglando detalles minimos y optimizando mis aplicaciones web.
-          Me gusta enseñar de forma estricta. Para mí todos los errores son válidos, me encantan los disparates para fortalecer mi experiencia y aprendizaje.
-        </p>
-        <p>
-          <h2 style="font-family:inherit">Me encanta...<i class="fa fa-heart-o" style="color:red"></i></h2>
-          <ul class="list-style-none">
-            <li class="li li-red">Las hamburguesas</li>
-            <li class="li li-red">La Música</li>
-            <li class="li li-red">Lo Natural</li>
-            <li class="li li-red">UI/UX Amigables</li>
-            <li class="li li-red">Leer</li>
-            <li class="li li-red">Tiempo solo</li>
-          </ul>
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-    <div class="w3-row-padding">
-
-      <div class="w3-third col">
-
-        <div id="education" class="w3-black w3-text-grey w3-card-4">
-
-          <div class="w3-container">
-            <h2 class="w3-text-grey w3-padding-16" style="font-family:inherit"><i class="fa fa-code	 fa-fw w3-margin-right text-primary"></i>Habilidades</h2>
-            <p>JSON</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:100%">100%</div>
-            </div>
-            <p>HTML5 / CSS3 / JavaScript</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:90%">90%</div>
-            </div>
-            <p>Ajax</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:86%">86%</div>
-            </div>
-            <p>PHP / MySQL</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:88%">
-                <div class="w3-center w3-text-white">88%</div>
-              </div>
-            </div>
-            <p>Bootstrap</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:87%">
-                <div class="w3-center w3-text-white">87%</div>
-              </div>
-            </div>
-            <p>Object Orientated Programming</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:76%">76%</div>
-            </div>
-            <p>jQuery</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:70%">
-                <div class="w3-center w3-text-white">70%</div>
-              </div>
-            </div>
-            <p>Social Manager</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:69%">
-                <div class="w3-center w3-text-white">69%</div>
-              </div>
-            </div>
-            <p>Photoshop / Ilustrator</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge bg-primary w3-text-white" style="width:52%">
-                <div class="w3-center w3-text-white">52%</div>
-              </div>
-            </div>
-            <br>
-
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right text-primary"></i>Idiomas</b></p>
-            <p>Español</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge bg-primary" style="height:24px;width:100%"></div>
-            </div>
-            <p>English</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge bg-primary" style="height:24px;width:10%"></div>
-            </div>
-            <br>
+          <div>
+            <ul>
+              <li><a href="javascript:villa.views.change('start')">Inicio</a></li>
+              <li><a href="javascript:villa.views.change('bio')">Sobre mí</a></li>
+              <li><a href="javascript:villa.views.change('skills')">Habilidades</a></li>
+              <li><a href="javascript:villa.views.change('contact')">Contactar</a></li>
+            </ul>
           </div>
-        </div><br>
-
-      </div>
-
-      <div class="w3-twothird col">
-
-        <div class="w3-container w3-card w3-black">
-          <h2 class="w3-text-grey w3-padding-16 " style="font-family:inherit"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge text-primary"></i>Certificados</h2>
-
-
-          <ul class="timeline">
-
-            <li>
-              <div class="direction-r">
-                <div class="flag-wrapper">
-                  <span class="flag"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" style="width:88px;height:28px" title="Google" alt="Google"></span>
-                  <!-- <span class="time-wrapper"><span class="time">2020</span></span> -->
-                </div>
-                <div><span class="desc">Desarrollo y Diseño Web</span></div>
-              </div>
-            </li>
-
-            <li>
-              <div class="direction-l">
-                <div class="flag-wrapper">
-                  <span class="flag"><img src="https://fundacioncarlosslim.org/wp-content/themes/fundacion2019/images/logo_fundacion3.png" style="width:88px;height:32px;filter: contrast(0.5);" title="Fundación Carlos Slim" alt="Fundación Carlos Slim"></span>
-                  <!-- <span class="time-wrapper"><span class="time">2020</span></span> -->
-                </div>
-                <div><span class="desc">Sistemas Informáticos</span></div>
-                <div><span class="desc">Seguridad informática</span></div>
-                <div><span class="desc">POO</span></div>
-              </div>
-            </li>
-
-
-            <li>
-              <div class="direction-r">
-                <div class="flag-wrapper">
-                  <span class="flag"><img src="https://base.imgix.net/files/base/ebm/asumag/image/2019/05/asumag_9440_stanford_university_logo_png_1200.png?auto=format&fit=crop&h=432&w=768" style="width:88px;height:42px;margin-top:8px" title="Stanford University" alt="Stanford University"></span>
-                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
-                </div>
-                <div><span class="desc">Ciencias de la computación</span></div>
-              </div>
-            </li>
-
-
-            <li>
-              <div class="direction-l">
-                <div class="flag-wrapper">
-                  <span class="flag"><img src="https://d3puay5pkxu9s4.cloudfront.net/pages/edutin-isotype-positive.svg" style="width:auto;height:22px;margin-right:4px" title="Edutin Academy" alt="Edutin Academy"> Edutin Academy</span>
-                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
-                </div>
-                <div><span class="desc">Desarrollo y Diseño Web</span></div>
-              </div>
-            </li>
-
-            <li>
-              <div class="direction-r">
-                <div class="flag-wrapper">
-                  <span class="flag"><img src="https://s3sf.tmimgcdn.com/af03eb7d785ce2f17c5ace599f051fce.svg" style="filter:contrast(.5);width:auto;height:22px;margin-right:4px" title="Template Monster" alt="Template Monster"> TemplateMonster</span>
-                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
-                </div>
-                <div><span class="desc">HTML / CSS</span></div>
-              </div>
-            </li>
-
-            <li>
-              <div class="direction-l">
-                <div class="flag-wrapper">
-                  <span class="flag"><img src="https://es.khanacademy.org/favicon.ico?logo" style="width:auto;height:22px;" title="Khan Academy" alt="Khan Academy"> Khan Academy</span>
-                  <!-- <span class="time-wrapper"><span class="time">2019</span></span> -->
-                </div>
-                <div><span class="desc">HTML / CSS / JavaScript</span></div>
-              </div>
-            </li>
-
-          </ul>
-
         </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-  <div id="quotes" class='flex-container'>
-    <div class="col col-12" style="padding:12px;font-size:1.2em;align-items: center;display:flex;min-width: 200px;max-width: 800px;margin: 0 auto;padding: 14px;">
-      <div>
-        <h2 class="w3-text-grey w3-padding-16 " style="font-family:inherit"><i class="fa fa-pencil fa-fw w3-margin-right w3-xxlarge text-primary"></i>Citas</h2>
-        <div class="quote">
-          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
-          <cite>"Lo que hace tu mano derecha que no sepa…"</cite>
-          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
-          <p class="text-justify font-italic" style="font-size: 13px">La frase más usada por personas que ven a los demás ayudar y ellos no hacen nada ni por sus parientes (porque no pueden o no quieren). He recopilado una breve explicación para este tipo de personas.</p>
-          <p class="text-justify">
-            A este tipo de personas les sugiero que reserven este tipo de palabras:
-            <b>“Cuando des limosna, que no sepa tu mano izquierda…”</b>
-          </p>
-          <p class="text-justify">
-            Ese pasaje se refiere a las oraciones que hacen para ser vistos, o los diezmos que le dan a Dios, solo para ser vistos por hombres.
-          </p>
-          <p class="text-justify">
-            Mí participación en <b>Aliento de Luz ONGD</b> junto a este versículo (Mateo 5) me inspiran a continuar evidenciando lo que se hace por el prójimo.
-            <b>Mateo 5: “Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder. Ni se enciende una luz y se pone debajo de un almud, sino sobre el candelero, y alumbra a todos los que están en casa. Así alumbre vuestra luz delante de los hombres, para que VEAN vuestras buenas OBRAS, y glorifiquen a vuestro Padre que está en los cielos”</b>.
-            Aclaro qué:
-            <ol class="text-left">
-              <li>Lo que hacemos a favor de los más vulnerables NO es limosna, es solidaridad; son buenas obras.</li>
-              <li>Las Organizaciones tenemos la obligación (legal y moral) de mostrar al público lo que se hacen con los fondos y el dinero de los que realizan donaciones. Lo que doy por mi parte, externo a una organización, con mi dinero personal, nunca lo muestro ni lo he mostrado en redes.</li>
-              <li>Es buen testimonio mostrar que surgió una nueva organización en medio de una crisis mundial en apoyo a las personas olvidadas de nuestro país Honduras, que no se quedó de brazos cruzados mientras muchos se encerraron, que fue más fuerte la fe que un supuesto virus respiratorio al cual no se le tuvo miedo, que sacó lo mejor de nosotros, que demostró quienes somos, especialmente cuando muchos están diciendo: “¿Y dónde están las Iglesias ahora?, ¿Donde están los que creen en Dios?”.</li>
-              <li>Mostrar las buenas obras anima a que otras organizaciones e incluso iglesias hagan lo mismo..</li>
-              <li>Mostrar las buenas obras hace que los que necesitan puedan comunicarse con <b>Aliento de Luz</b> y solicitar ayuda.</li>
-              <li>Esto se llama “transparencia”.</li>
-            </ol>
-            <span style="font-weight: bold; color: cornflowerblue">
-              Así que, si no ayudas, reservate de colaborar con la religiosidad.
-            </span>
-          </p>
-        </div>
-        <hr style="border-color: #232323;" />
-        <div class="quote">
-          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
-          <cite>Ama hoy, perdona hoy, vive tu vida hoy. Por si no hay mañana.</cite>
-          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
-          <p class="text-right">- S. Hernandez.</p>
-        </div>
-        <div class="quote">
-          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
-          <cite>La ignorancia es como la falta de oxigeno.</cite>
-          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
-          <p class="text-justify">Todos somos ignorantes. Nadie lo sabe todo, sin embargo, día a día nos topamos con diferentes personalidades con las cuales compartimos y por cualquier comentario podemos quedar avergonzados. Leyendo fortalecemos nuestra capacidad mental, nadie podrá engañarnos fácilmente e incluso podremos distribuir información interesante a los demás.</p>
-        </div>
-        <hr>
-        <div class="quote">
-          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
-          <cite>Si de una forma no funcionó, se intenta con otra.</cite>
-          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
-          <p class="text-justify">En esta vida hay muchas opciones para ejecutar algo. Desistir es una opción, pero NO es aceptable.</p>
-        </div>
-        <hr>
-        <div class="quote">
-          <div class="text-left"><i class="fa fa-quote-left text-primary"></i></div>
-          <cite>Una idea no vale nada.</cite>
-          <div class="text-right"><i class="fa fa-quote-right text-primary"></i></div>
-          <p class="text-justify">Todo somos capaces de generar ideas, no todos inician y se mantienen en pie. Date cuenta que una idea no vale nada: lucha por transformar tu idea en un producto real.</p>
-        </div>
-
-
       </div>
     </div>
 
-  </div>
-
-</main>
-
-<div style="margin-top:14px;background:rgba(255, 255, 255, 0.1);padding: 14px;border-radius:1em;text-align:center">
-    <div style="margin-bottom:14px">Copiado? Te inspiraste? O simplemente te gusta el sitio web? No hay problema, solo cómprame una hamburguesa🍔 y hazme feliz.</div>
-            <a href="https://www.paypal.com/donate/?cmd=_donations&amp;business=pm7609460%40gmail.com&amp;item_name=Donation&amp;item_number=WFD-1001&amp;no_shipping=1&amp;no_note=1&amp;tax=0&amp;currency_code=USD&amp;lc=US&amp;bn=PP_DonationsBF&amp;target=_blank&amp;Z3JncnB0=&amp;locale.x=es_ES" class="btn btn-outline-warning" rel="noreferrer" rel="noreferrer" target="_blank" style="background: darkgoldenrod;color: white;padding:8px 22px;">Donar</a>
-
-    <div style="margin-top:14px">
-        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" onclick="window.location = document.querySelector('div a[href*=donate]').href" style="height:62px;width:auto;border-radius:1em" title="Puedes donar con cualquier tarjeta">
+    <div class="banner">
+      <div id="particle-canvas"></div>
     </div>
-</div>
 
-<hr class="w3-grey">
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    setTimeout(function(){
-      document.getElementById("msg").focus();
-    }, 100);
-  }
+    <div id="villa-root">
 
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-</script>
+      <div id="first" class="container h-100" data-view="start">
+        <div class="row h-100 justify-content-center">
+          <div class="col col-12 col-md-6 col-lg-6 h-100">
+            <div class="d-flex align-items-center h-100 justify-content-center">
+              <div>
+                <div class="text-center">
+                  <img class="rounded-circle p-1" src="/img/avatar2.jpg" style="width: 156px;border: solid white 3px;" alt="Alejandro Villatoro, Desarrollador Web" />
+                </div>
+                <h1 class="font-weight-bold h1" style="text-shadow: 3px 3px 3px black">Alejandro Villatoro</h1>
+                <div class="font-italic h6 text-muted p-2 text-center" style="color: #9280ca;border-radius: 1em;border: solid 3px;">Web Developer and Designer</div>
+                <div class="">
+                  <button type="button" onclick="villa.views.change('bio')" class="btn" style="background: transparent!important">
+                    <span id="icon-down">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<footer id="contact" class="w3-container w3-center w3-margin-top">
-  <p>Búscame en...</p>
-  <a class="fa fa-facebook-official w3-hover-opacity icon" style="padding:4px;text-decoration:none" rel="noreferrer" target="_blank" href="https://www.facebook.com/AleVillatoroM/"></a>
-  <a class="fa fa-instagram w3-hover-opacity icon" style="padding:4px;text-decoration:none" rel="noreferrer" target="_blank" href="https://www.instagram.com/AleVillatoroM/"></a>
-  <a class="fa fa-twitter w3-hover-opacity icon" style="padding:4px;text-decoration:none" rel="noreferrer" target="_blank" href="https://www.twitter.com/AleVillatoroM"></a>
+      <div class="container-fluid h-100" style="display: none" data-view="bio">
+        <div class="row h-100" style="background-image: var(--url-bg-bio); background-repeat: no-repeat;background-size: cover;background-position: center center;">
+          <div class="col col-12 col-md-5 col-lg-5 h-100">
+            <div class="d-flex align-items-center h-100">
+              <div>
+                <div>
+                  <h1 class="font-weight-bold h1" style="text-shadow: 3px 3px 3px black">Sobre mí</h1>
+                  <div class="h6 text-muted" style="text-align: justify; background: black">
+                    <p class="p-2">
+                      Apasionado por el diseño y desarrollo de aplicaciones web, tengo más de cuatro (4) años de experiencia. He desarrollado múltiples sitios y apps para organizaciones y MiPyMe's, un día espero hacer algo que cambie la forma común del internet.
+                    </p>
+                    <p class="p-2">
+                      Soy perfeccionista, optimista y perseverante en todo el ambiente cotidiano. Me gusta abogar por la calidad y la justicia. Todos los días trato de seguir en constante crecimiento profesional y mental.
+                    </p>
+                    <p class="p-2">
+                      Me encanta la música, leer, lo natural, las hamburguesas y disfrutar el tiempo solo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid h-100" style="display: none" data-view="skills">
+        <div class="row justify-content-center h-100">
+          <div class="col col-12 col-md-10 col-lg-10 h-100">
+            <div class="mt-5">
+              <div>
+                <h1 class="font-weight-bold h1" style="text-shadow: 3px 3px 3px black">Habilidades</h1>
+
+                <div class="text-left d-flex justify-content-center align-items-center">
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" height="25" viewBox="0 0 1952.00 734.93" enable-background="new 0 0 1952.00 734.93" xml:space="preserve"><g><path fill="#3D3D3D" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 1436.62,603.304L 1493.01,460.705L 1655.83,460.705L 1578.56,244.39L 1675.2,0.000528336L 1952,734.933L 1747.87,734.933L 1700.57,603.304L 1436.62,603.304 Z "/><path fill="#5A0FC8" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 1262.47,734.935L 1558.79,0.00156593L 1362.34,0.0025425L 1159.64,474.933L 1015.5,0.00351906L 864.499,0.00351906L 709.731,474.933L 600.585,258.517L 501.812,562.819L 602.096,734.935L 795.427,734.935L 935.284,309.025L 1068.63,734.935L 1262.47,734.935 Z "/><path fill="#3D3D3D" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 186.476,482.643L 307.479,482.643C 344.133,482.643 376.772,478.552 405.396,470.37L 436.689,373.962L 524.148,104.516C 517.484,93.9535 509.876,83.9667 501.324,74.5569C 456.419,24.852 390.719,0.000406265 304.222,0.000406265L -3.8147e-006,0.000406265L -3.8147e-006,734.933L 186.476,734.933L 186.476,482.643 Z M 346.642,169.079C 364.182,186.732 372.951,210.355 372.951,239.95C 372.951,269.772 365.238,293.424 349.813,310.906C 332.903,330.331 301.766,340.043 256.404,340.043L 186.476,340.043L 186.476,142.598L 256.918,142.598C 299.195,142.598 329.103,151.425 346.642,169.079 Z "/></g></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">PWA</div>
+                    </div>
+                  </div>
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg width="32" viewBox="0 0 256 361" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M255.555 70.766l-23.241 260.36-104.47 28.962-104.182-28.922L.445 70.766h255.11z" fill="#E44D26"/><path d="M128 337.95l84.417-23.403 19.86-222.49H128V337.95z" fill="#F16529"/><path d="M82.82 155.932H128v-31.937H47.917l.764 8.568 7.85 88.01H128v-31.937H85.739l-2.919-32.704zM90.018 236.542h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58l-.14.037-35.568-9.604-2.274-25.471z" fill="#EBEBEB"/><path d="M24.18 0h16.23v16.035h14.847V0h16.231v48.558h-16.23v-16.26H40.411v16.26h-16.23V0zM92.83 16.103H78.544V0h44.814v16.103h-14.295v32.455h-16.23V16.103h-.001zM130.47 0h16.923l10.41 17.062L168.203 0h16.93v48.558h-16.164V24.49l-11.166 17.265h-.28L146.35 24.49v24.068h-15.88V0zM193.21 0h16.235v32.508h22.824v16.05h-39.06V0z"/><path d="M127.89 220.573h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576H127.89v31.937zM127.89 155.854v.078h77.143l.64-7.178 1.456-16.191.763-8.568H127.89v31.86z" fill="#FFF"/></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">HTML</div>
+                    </div>
+                  </div>
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg width="32" viewBox="0 0 256 361" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z" fill="#264DE4"/><path d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z" fill="#2965F1"/><path d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z" fill="#EBEBEB"/><path d="M60.484 0h38.68v16.176H76.66v16.176h22.506v16.175H60.484V0zM106.901 0h38.681v14.066h-22.505v2.813h22.505v32.352h-38.68V34.46h22.505v-2.813H106.9V0zM153.319 0H192v14.066h-22.505v2.813H192v32.352h-38.681V34.46h22.505v-2.813H153.32V0z"/><path d="M202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576z" fill="#FFF"/></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">CSS</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-left d-flex justify-content-center align-items-center">
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg width="32" height="32" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M0 0h256v256H0V0z" fill="#F7DF1E"/><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"/></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">JavaScript</div>
+                    </div>
+                  </div>
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg width="32" height="32" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M0 222.991C0 241.223 14.779 256 33.009 256H222.99C241.223 256 256 241.221 256 222.991V33.01C256 14.777 241.221 0 222.991 0H33.01C14.777 0 0 14.779 0 33.009V222.99z" fill="#563D7C"/><path d="M106.158 113.238V76.985h31.911c3.04 0 5.97.253 8.792.76 2.822.506 5.319 1.41 7.49 2.713 2.17 1.303 3.907 3.112 5.21 5.427 1.302 2.316 1.954 5.283 1.954 8.9 0 6.513-1.954 11.217-5.862 14.111-3.907 2.895-8.9 4.342-14.979 4.342h-34.516zM72.075 50.5v155h75.112c6.947 0 13.713-.868 20.298-2.605 6.585-1.737 12.446-4.414 17.584-8.032 5.137-3.618 9.226-8.286 12.265-14.002 3.04-5.717 4.559-12.483 4.559-20.298 0-9.697-2.352-17.982-7.055-24.856-4.704-6.875-11.832-11.687-21.384-14.437 6.947-3.328 12.194-7.598 15.74-12.808 3.545-5.21 5.318-11.722 5.318-19.538 0-7.236-1.194-13.314-3.582-18.235-2.388-4.92-5.753-8.864-10.095-11.831-4.341-2.967-9.551-5.102-15.63-6.404-6.078-1.303-12.808-1.954-20.189-1.954H72.075zm34.083 128.515v-42.549h37.121c7.381 0 13.315 1.7 17.802 5.102 4.486 3.401 6.73 9.081 6.73 17.041 0 4.053-.688 7.381-2.063 9.986-1.375 2.605-3.22 4.668-5.536 6.187-2.315 1.52-4.993 2.605-8.032 3.257-3.04.65-6.223.976-9.552.976h-36.47z" fill="#FFF"/></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">Bootstrap</div>
+                    </div>
+                  </div>
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg width="52" viewBox="0 0 256 134" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><g fill-rule="evenodd"><ellipse fill="#8993BE" cx="128" cy="66.63" rx="128" ry="66.63"/><path d="M35.945 106.082l14.028-71.014H82.41c14.027.877 21.041 7.89 21.041 20.165 0 21.041-16.657 33.315-31.562 32.438H56.11l-3.507 18.411H35.945zm23.671-31.561L64 48.219h11.397c6.137 0 10.52 2.63 10.52 7.89-.876 14.905-7.89 17.535-15.78 18.412h-10.52zM100.192 87.671l14.027-71.013h16.658l-3.507 18.41h15.78c14.028.877 19.288 7.89 17.535 16.658l-6.137 35.945h-17.534l6.137-32.438c.876-4.384.876-7.014-5.26-7.014H124.74l-7.89 39.452h-16.658zM153.425 106.082l14.027-71.014h32.438c14.028.877 21.042 7.89 21.042 20.165 0 21.041-16.658 33.315-31.562 32.438h-15.781l-3.507 18.411h-16.657zm23.67-31.561l4.384-26.302h11.398c6.137 0 10.52 2.63 10.52 7.89-.876 14.905-7.89 17.535-15.78 18.412h-10.521z" fill="#232531"/></g></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">PHP</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-left d-flex justify-content-center align-items-center">
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <img src="https://cdn.worldvectorlogo.com/logos/mysql-7.svg" style="height: 32px" alt="MySQL">
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">MySQL</div>
+                    </div>
+                  </div>
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg height="32" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 1781 2466.8" style="enable-background:new 0 0 1781 2466.8;" xml:space="preserve">
+                        <path style="fill:#FFA000;" d="M1169.4,891l-246.7,229.7l-229-462.1L812,392.9c29.9-53,78.8-53.7,108.7,0L1169.4,891z"/>
+                        <path style="fill:#F57F17;" d="M922.8,1120.6L0,1978.9L693.8,658.6L922.8,1120.6z"/>
+                        <path style="fill:#FFCA28;" d="M1439.9,539.7c44.2-42.1,89.7-27.9,101.2,31.9L1781,1967.3L985.3,2445c-27.9,15.6-101.9,21.7-101.9,21.7
+                        s-67.3-8.2-93.1-22.4L0,1978.9L1439.9,539.7z"/>
+                        <path class="st0" d="M693.8,658.6L0,1978.9L309.2,49.1c11.6-59.8,45.5-65.9,76.1-12.9L693.8,658.6z"/>
+                        </svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">Firebase Hosting</div>
+                    </div>
+                  </div>
+                  <div class="item-skills h6 m-2 border border-dark p-2 rounded">
+                    <div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 300 295"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-973.025" y1="1430.582" x2="-858.025" y2="1187.581" gradientTransform="matrix(1 0 0 -1 1045.93 1415.176)"><stop offset="0" stop-color="#a0cbff"/><stop offset=".394" stop-color="#a0cbfe"/><stop offset=".583" stop-color="#8ec2fc"/><stop offset=".784" stop-color="#83bcfb"/><stop offset="1" stop-color="#7fbafb"/></linearGradient><path fill="url(#a)" d="M0 0h300v295H0z"/><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="-932.205" y1="1388.221" x2="-867.205" y2="1172.219" gradientTransform="matrix(1 0 0 -1 1045.93 1415.176)"><stop offset="0" stop-color="#090058"/><stop offset="1" stop-color="#070033"/></linearGradient><path fill="url(#b)" d="M23.859 23.459h252.284v248.082H23.859z"/><g><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="-1008.793" y1="1417.652" x2="-893.794" y2="1174.654" gradientTransform="matrix(1 0 0 -1 1045.93 1415.176)"><stop offset="0" stop-color="#a0cbff"/><stop offset=".394" stop-color="#a0cbfe"/><stop offset=".583" stop-color="#8ec2fc"/><stop offset=".784" stop-color="#83bcfb"/><stop offset="1" stop-color="#7fbafb"/></linearGradient><path d="M72.498 83.144s18.968-.499 34.582-.499c15.778 0 27.028 3.712 34.581 10.235 7.219 6.164 12.087 16.672 12.087 28.634s-3.694 21.75-10.41 28.632c-8.729 8.881-18.901 14.138-36.258 14.865-4.795.201-9.233.249-9.233.249v38.884h-25.35l.001-121zm25.348 60.573c2.754.268 4.48.139 8.562.09 13.598-.163 21.989-8.432 21.989-20.937 0-11.234-6.919-20.458-19.973-20.936-5.203-.19-10.578 0-10.578 0v41.783z" fill="url(#c)"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="-943.289" y1="1449.381" x2="-827.834" y2="1205.42" gradientTransform="matrix(1 0 0 -1 1045.93 1415.176)"><stop offset="0" stop-color="#a0cbff"/><stop offset=".394" stop-color="#a0cbfe"/><stop offset=".583" stop-color="#8ec2fc"/><stop offset=".784" stop-color="#83bcfb"/><stop offset="1" stop-color="#7fbafb"/></linearGradient><path d="M163.422 177.055c5.109 3.135 17.165 7.83 25.383 7.83 8.396 0 11.863-2.959 11.863-7.572 0-4.619-2.738-9.471-13.145-12.979-18.439-6.279-25.56-13.795-25.375-24.315 0-16.991 14.238-29.731 36.328-29.731 10.406 0 18.719 3.402 24.191 6.17v20.392c-4.02-2.218-15.611-7.17-23.277-7.17-6.759 0-10.59 2.77-10.59 7.382 0 4.248 3.471 6.464 14.424 10.344 16.975 5.908 24.096 14.584 24.276 27.879 0 16.805-12.954 30.168-38.7 29.357-8.836-.278-18.625-3.771-25.38-7.459l.002-20.128z" fill="url(#d)"/></g></svg>
+                      </div>
+                      <div class="font-weight-bold mt-1 text-light">PhotoShop</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid h-100" style="display: none" data-view="contact">
+        <div class="row h-100" style="background-image: var(--url-bg-contact); background-repeat: no-repeat;background-size: cover;background-position: center center;">
+          <div class="col col-12 col-md-5 col-lg-5 h-100">
+            <div class="d-flex align-items-center h-100">
+              <div>
+                <div>
+                  <h1 class="font-weight-bold h1" style="text-shadow: 3px 3px 3px black">Contáctame</h1>
+                  <div class="h6 text-muted" style="text-align: justify;">
+                    <div class="p-2 bg-white">
+                      <a href="//fb.com/AleVillatoroM">
+                        <span style="position: relative; top: -1px">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="fill: var(--bs-primary)" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                          </svg>
+                        </span>
+                        <span class="text-dark">@AleVillatoroM</span>
+                      </a>
+                    </div>
+                    <div class="p-2 bg-white">
+                      <a href="//twitter.com/AleVillatoroM">
+                        <span style="position: relative; top: -1px">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="fill: var(--bs-primary)" class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                          </svg>
+                        </span>
+                        <span class="text-dark">@AleVillatoroM</span>
+                      </a>
+                    </div>
+                    <div class="p-2 bg-white">
+                      <a href="//t.me/fervillatoro">
+                        <span style="position: relative; top: -1px">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="fill: var(--bs-primary)" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                          </svg>
+                        </span>
+                        <span class="text-dark">@fervillatoro</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+
+    // Copy to Codepen.io for fervilla.gitHub.io
+    // Create Particle class
+    var Particle = function (parent) {
+
+      this.canvas = parent.canvas;
+      this.ctx = parent.ctx;
+      this.particleColor = parent.options.particleColor;
+
+      this.x = Math.random() * this.canvas.width;
+      this.y = Math.random() * this.canvas.height;
+      this.velocity = {
+        x: (Math.random() - 0.5) * parent.options.velocity,
+        y: (Math.random() - 0.5) * parent.options.velocity
+      };
+    };
+    Particle.prototype.update = function () {
+
+      // Change dir if outside map
+      if (this.x > this.canvas.width + 20 || this.x < -20) {
+        this.velocity.x = -this.velocity.x;
+      }
+      if (this.y > this.canvas.height + 20 || this.y < -20) {
+        this.velocity.y = -this.velocity.y;
+      }
+
+      // Update position
+      this.x += this.velocity.x;
+      this.y += this.velocity.y;
+    };
+    Particle.prototype.draw = function () {
+
+      // Draw particle
+      this.ctx.beginPath();
+      this.ctx.fillStyle = this.particleColor;
+      this.ctx.globalAlpha = 0.7;
+      this.ctx.arc(this.x, this.y, 1.5, 0, 2 * Math.PI);
+      this.ctx.fill();
+    };
+
+    // Create ParticleNetwork class
+    var ParticleNetwork = function (canvas, options) {
+
+      this.canvasDiv = canvas;
+      this.canvasDiv.size = {
+        'width': this.canvasDiv.offsetWidth,
+        'height': this.canvasDiv.offsetHeight
+      };
+
+      // Set options
+      options = options !== undefined ? options : {};
+      this.options = {
+        particleColor: (options.particleColor !== undefined) ? options.particleColor : '#fff',
+        background: (options.background !== undefined) ? options.background : '#1a252f',
+        interactive: (options.interactive !== undefined) ? options.interactive : true,
+        velocity: this.setVelocity(options.speed),
+        density: this.setDensity(options.density)
+      };
+
+      this.init();
+    };
+    ParticleNetwork.prototype.init = function () {
+
+      // Create background div
+      this.bgDiv = document.createElement('div');
+      this.canvasDiv.appendChild(this.bgDiv);
+      this.setStyles(this.bgDiv, {
+        'position': 'absolute',
+        'top': 0,
+        'left': 0,
+        'bottom': 0,
+        'right': 0,
+        'z-index': 1
+      });
+
+      // Check if valid background hex color
+      if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.background)) {
+        this.setStyles(this.bgDiv, {
+          'background': this.options.background
+        });
+      }
+      // Else check if valid image
+      else if ((/\.(gif|jpg|jpeg|tiff|png)$/i).test(this.options.background)) {
+        this.setStyles(this.bgDiv, {
+          'background': 'url("' + this.options.background + '") no-repeat center',
+          'background-size': 'cover'
+        });
+      }
+      // Else throw error
+      else {
+        console.error('Please specify a valid background image or hexadecimal color');
+        return false;
+      }
+
+      // Check if valid particleColor
+      if (!(/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.options.particleColor)) {
+        console.error('Please specify a valid particleColor hexadecimal color');
+        return false;
+      }
+
+      // Create canvas & context
+      this.canvas = document.createElement('canvas');
+      this.canvasDiv.appendChild(this.canvas);
+      this.ctx = this.canvas.getContext('2d');
+      this.canvas.width = this.canvasDiv.size.width;
+      this.canvas.height = this.canvasDiv.size.height;
+      this.setStyles(this.canvasDiv, { 'position': 'relative' });
+      this.setStyles(this.canvas, {
+        'z-index': '20',
+        'position': 'relative'
+      });
+
+      // Add resize listener to canvas
+      window.addEventListener('resize', function () {
+
+        // Check if div has changed size
+        if (this.canvasDiv.offsetWidth === this.canvasDiv.size.width && this.canvasDiv.offsetHeight === this.canvasDiv.size.height) {
+          return false;
+        }
+
+        // Scale canvas
+        this.canvas.width = this.canvasDiv.size.width = this.canvasDiv.offsetWidth;
+        this.canvas.height = this.canvasDiv.size.height = this.canvasDiv.offsetHeight;
+
+        // Set timeout to wait until end of resize event
+        clearTimeout(this.resetTimer);
+        this.resetTimer = setTimeout(function () {
+
+          // Reset particles
+          this.particles = [];
+          for (var i = 0; i < this.canvas.width * this.canvas.height / this.options.density; i++) {
+            this.particles.push(new Particle(this));
+          }
+          if (this.options.interactive) {
+            this.particles.push(this.mouseParticle);
+          }
+
+          // Update canvas
+          requestAnimationFrame(this.update.bind(this));
+
+        }.bind(this), 500);
+
+      }.bind(this));
+
+      // Initialise particles
+      this.particles = [];
+      for (var i = 0; i < this.canvas.width * this.canvas.height / this.options.density; i++) {
+        this.particles.push(new Particle(this));
+      }
+
+      if (this.options.interactive) {
+
+        // Add mouse particle if interactive
+        this.mouseParticle = new Particle(this);
+        this.mouseParticle.velocity = {
+          x: 0,
+          y: 0
+        };
+        this.particles.push(this.mouseParticle);
+
+        // Mouse event listeners
+        this.canvas.addEventListener('mousemove', function (e) {
+          this.mouseParticle.x = e.clientX - this.canvas.offsetLeft;
+          this.mouseParticle.y = e.clientY - this.canvas.offsetTop;
+        }.bind(this));
+
+        this.canvas.addEventListener('mouseup', function (e) {
+          this.mouseParticle.velocity = {
+            x: (Math.random() - 0.5) * this.options.velocity,
+            y: (Math.random() - 0.5) * this.options.velocity
+          };
+          this.mouseParticle = new Particle(this);
+          this.mouseParticle.velocity = {
+            x: 0,
+            y: 0
+          };
+          this.particles.push(this.mouseParticle);
+        }.bind(this));
+      }
+
+      // Update canvas
+      requestAnimationFrame(this.update.bind(this));
+    }
+    ParticleNetwork.prototype.update = function () {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.globalAlpha = 1;
+
+      // Draw particles
+      for (var i = 0; i < this.particles.length; i++) {
+        this.particles[i].update();
+        this.particles[i].draw();
+
+        // Draw connections
+        for (var j = this.particles.length - 1; j > i; j--) {
+          var distance = Math.sqrt(
+          Math.pow(this.particles[i].x - this.particles[j].x, 2)
+          + Math.pow(this.particles[i].y - this.particles[j].y, 2)
+          );
+          if (distance > 160 || distance < 30) {
+            continue;
+          }
+
+          this.ctx.beginPath();
+          this.ctx.strokeStyle = this.options.particleColor;
+          this.ctx.globalAlpha = (160 - distance) / 500;
+          this.ctx.lineWidth = 1;
+          this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+          this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+          this.ctx.stroke();
+        }
+      }
+
+      if (this.options.velocity !== 0) {
+        requestAnimationFrame(this.update.bind(this));
+      }
+    };
+
+    // Helper method to set velocity multiplier
+    ParticleNetwork.prototype.setVelocity = function (speed) {
+      if (speed === 'fast') {
+        return 1;
+      }
+      else if (speed === 'slow') {
+        return 0.33;
+      }
+      else if (speed === 'none') {
+        return 0;
+      }
+      return 0.66;
+    }
+    // Helper method to set density multiplier
+    ParticleNetwork.prototype.setDensity = function (density) {
+      if (density === 'high') {
+        return 5000;
+      }
+      else if (density === 'low') {
+        return 20000;
+      }
+      return 10000;
+    }
+    // Helper method to set multiple styles
+    ParticleNetwork.prototype.setStyles = function (div, styles) {
+      for (var property in styles) {
+        div.style[property] = styles[property];
+      }
+    }
 
 
-  <p>Powered by &nbsp;<a href="http://www.afervm.cf/" rel="noreferrer" target="_blank"><img src="https://i.ibb.co/XbVswDk/afervm.png" alt="Afervm" style="width:92px;height:auto;filter:contrast(.5)"> </a></p>
-</footer>
+    var canvasDiv = document.getElementById('particle-canvas');
+    var options = {
+      particleColor: '#fff',
+      background: '#000000',
+      interactive: true,
+      speed: 'slow',
+      density: 'high'
+    };
+    var particleCanvas = new ParticleNetwork(canvasDiv, options);
 
-</body>
+    /**
+    * @object villa: Objeto global
+    */
+    let villa = {
+      /**
+      * @method views: lo que el usuario ve.
+      */
+      views: {
+        change: function ( requestedView )
+        {
+          // ocultar el menu
+          document.querySelector(".outer-menu input[type=checkbox]").checked = false;
+
+          // obtener todas las vistas
+          let views = document.querySelectorAll("[data-view]");
+          for ( let view of views )
+          {
+            // ocultar todas las vistas excepto la que fue solicitada
+            view.dataset.view == requestedView ? void(0) : view.style.display = "none";
+          }
+          // mostrar la vista solicitada
+          requestedView = document.querySelector( `[data-view=${requestedView}]` );
+          // requestedView.style.display = "block";
+          requestedView.style.cssText = "animation: changeViewAnimation 3.5s";
+        }
+      }
+    };
+    </script>
+  </body>
 </html>
