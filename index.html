@@ -285,6 +285,19 @@
         align-items: center;
         background: black;
       }
+
+      /* pantallas */
+      @media (max-width: 576px) {
+        [data-view=bio] .row{
+          background-image: none !important;
+          background: black;
+        }
+      }
+      @media (max-width: 414px) {
+        [data-view=inicio]{
+          background-image: url('/assets/img/fondo3_473x800.jpg');
+        }
+      }
     </style>
   </head>
   <body>
@@ -341,7 +354,7 @@
 
       <div class="container-fluid h-100" style="display: none" data-view="bio">
         <div class="row h-100" style="background-image: var(--url-bg-bio); background-repeat: no-repeat;background-size: cover;background-position: center center;">
-          <div class="col col-12 col-md-5 col-lg-5 h-100">
+          <div class="col col-12 col-sm-5 col-md-5 col-lg-5 h-100">
             <div class="d-flex align-items-center h-100">
               <div>
                 <div>
