@@ -6,7 +6,7 @@ let viewOffline = '/';
 let CACHE_ASSETS = [
   '/favicon.ico',
   'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css',
-  '/assets/css/index.min.css',
+  '/assets/css/index.min.css?v=1',
   '/assets/js/index.min.js',
   '/assets/img/avatar2.jpg',
   '/assets/img/avatar.png',
