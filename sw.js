@@ -12,6 +12,7 @@ let CACHE_ASSETS = [
   '/assets/img/avatar.png',
   '/assets/img/fondo-bio.jpg',
   '/assets/img/fondo-contact.jpg',
+  '/assets/img/programming-1873854_640.png',
   // experiencia offline
   viewOffline
 ];
