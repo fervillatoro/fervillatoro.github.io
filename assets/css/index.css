@@ -5,7 +5,7 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  background: url(/assets/img/programming-1873854_640.png);
+  background: url(/assets/img/programming-1873854_640.png)!important;
 }
 
 body {
