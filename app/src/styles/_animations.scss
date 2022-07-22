@@ -1,0 +1,31 @@
+/**
+* @keyframes
+*/
+$keyframes: 'right', 'left', 'top', 'bottom';
+
+@each $keyframeName in $keyframes {
+  @keyframes #{$keyframeName} {
+    0%   { opacity: 0; #{$keyframeName}: 10px; }
+    100% { opacity: 1; #{$keyframeName}: 0px; }
+  }
+
+  [data-af*="animation-#{$keyframeName}"]  { animation-name: #{$keyframeName}; }
+}
+
+/**
+* @duration
+*/
+$seconds: 200ms, 400ms, 600ms;
+
+@each $duration in $seconds {
+  [data-af*="animation-#{$duration}"]{ animation-duration: #{$duration}!important; }
+}
+
+
+[data-af*="animation"]{
+  position: relative;
+  animation-duration: 300ms;
+}
+
+[data-af*="animation-infinite"]{ animation-iteration-count: infinite; }
+[data-af*="animation-delay-2s"]{ animation-delay: 2s; }

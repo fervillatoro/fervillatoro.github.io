@@ -1,0 +1,49 @@
+@use "./../../../styles/animations";
+
+.navbar{
+  box-shadow: 0px 0px 8px #adadad;
+  background: rgba(255,255,255, 0.8)
+}
+
+:root{
+  --height-nav-item: auto;
+  --count-nav-item-mobile: 3;
+}
+
+.nav-item{
+  text-align: center!important;
+  margin-bottom: 0!important;
+  // width: calc( 100% / var(--count-nav-item-desktop) );
+  height: var(--height-nav-item);
+}
+
+.nav-item .nav-link{ height: var(--height-nav-item); }
+
+// #navbarNav{
+//   width: calc( 100% - 300px);
+//   margin: 0 auto;
+// }
+
+@media only screen and (max-width:771px) {
+
+  /* menu en moviles */
+  .nav-item{
+    width: calc( 100% / var(--count-nav-item-mobile) );
+    // height: calc( var(--height-nav-item) - 19px );
+  }
+  .nav-item .nav-link{
+    height: calc( var(--height-nav-item) - 19px );
+    padding-left: .5rem!important;
+    padding-right: .5rem!important;
+  }
+  #container-logo-menu-phone {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+  }
+  #container-logo-menu-phone .icon-svg{ display: block!important; }
+  .menu-container{ visibility: hidden; }
+
+  [container-logo]{ width: 100%; }
+}

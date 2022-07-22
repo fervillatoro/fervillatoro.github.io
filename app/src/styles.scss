@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  // margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  // background: url(https://fervillatoro.github.io/assets/img/bg.webp) center / cover;
+}
+
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "styles/angular-material/palette";
+@import "styles/angular-material/init";
+
+@import "styles/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/utilities";
+//
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/utilities/api";
+
+// @import "./../node_modules/bootstrap-icons/bootstrap-icons.css";
+
+// @import "styles/reset";
+
+.separator-nav{
+  padding-top: 56px;
+}

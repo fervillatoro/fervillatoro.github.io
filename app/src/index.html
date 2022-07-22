@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es-HN">
+  <head>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta charset="utf-8">
+    <title>Alejandro Villatoro | Desarrollador Web Full-Stack</title>
+    <meta name="description" content="Desarrollador Web experto en Aplicaciones Web Progresivas (PWA), HTML, CSS, TypeScript, JavaScript, Angular, Angular Material, Bootstrap, PHP, MySQL. Acompañado a esto buen manejo de la redacción.">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <app-root><div style="display: flex;justify-content: center; align-items: center; height:100%;width: 100%;"><div style="color: gray">Espere un momento...</div></div></app-root>
+    <script>
+    // SW.JS
+    /**
+  El siguiente ejemplo simple registra un ejemplo de trabajador de servicio
+  y luego agrega un controlador de eventos a un botón para que pueda actualizar
+  explícitamente el trabajador de servicio cuando lo desee:
+  */
+    navigator.serviceWorker.register('/sw.js')
+    .then(function(registration) {
+
+      registration.addEventListener('updatefound', () => {
+        // se encontro una nueva version de SW y se actualizo
+        console.log("Se actualizo el SW a la nueva version.");
+
+        // Un trabajador de servicio salvaje ha aparecido en reg.installing!
+        const newWorker = registration.installing;
+
+        newWorker.state;
+        // "installing" - el evento de instalación se ha activado, pero aún no se ha completado
+        // "installed"  - instalacion completada
+        // "activating" - el evento de activación se ha disparado, pero aún no se ha completado
+        // "activated"  - completamente activo
+        // "redundant"  - descartado. Se produjo un error en la instalación o se reemplazó por una versión más reciente.
+
+        newWorker.addEventListener('statechange', () => {
+          // newWorker.state ha cambiado
+          console.log("El evento statechange ha cambiado");
+        });
+      });
+      console.log(registration);
+      // El registro funcionó
+      console.log('Registration succeeded.');
+    })
+    .catch(function(error) {
+      // el registro falló
+      console.log('Registration failed with ' + error);
+    });
+    </script>
+  </body>
+</html>

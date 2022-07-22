@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-primary" href="/" routerLink="/">
+      <span class="d-none d-md-block">Alejandro Villatoro</span>
+      <img src="assets/img/icon.webp" class="d-block d-md-none position-absolute" style="width: 52px;top: 8px;" alt="Logo Alejandro Villatoro">
+    </a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li *ngFor="let item of items" class="nav-item">
+          <a class="nav-link" [href]="item.href" [routerLink]="item.href" [ngClass]="{ 'text-primary': isPageActive(item.href) }">
+            {{item.name}}
+          </a>
+          <div *ngIf="isPageActive(item.href)" data-af="animation-top animation-200ms" class="d-flex justify-content-center">
+            <div class="d-flex">
+              <div class="bg-danger rounded-start" style="width: 10px;height: 4px;"></div>
+              <div class="bg-primary rounded-end" style="width: 10px;height: 4px;"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
