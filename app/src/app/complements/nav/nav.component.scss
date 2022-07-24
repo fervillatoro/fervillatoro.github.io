@@ -5,34 +5,30 @@
   background: rgba(255,255,255, 0.8)
 }
 
-:root{
-  --height-nav-item: auto;
-  --count-nav-item-mobile: 3;
-}
+$height-nav-item: auto;
+$count-nav-item-mobile: 4;
 
 .nav-item{
   text-align: center!important;
   margin-bottom: 0!important;
   // width: calc( 100% / var(--count-nav-item-desktop) );
-  height: var(--height-nav-item);
+  height: $height-nav-item;
 }
 
-.nav-item .nav-link{ height: var(--height-nav-item); }
-
-// #navbarNav{
-//   width: calc( 100% - 300px);
-//   margin: 0 auto;
-// }
+.nav-item .nav-link{ height: $height-nav-item; }
 
 @media only screen and (max-width:771px) {
 
   /* menu en moviles */
+  #navbarNav{
+    width: 100%;
+  }
   .nav-item{
-    width: calc( 100% / var(--count-nav-item-mobile) );
-    // height: calc( var(--height-nav-item) - 19px );
+    width: calc( 100% / $count-nav-item-mobile );
+    height: calc( $height-nav-item - 19px );
   }
   .nav-item .nav-link{
-    height: calc( var(--height-nav-item) - 19px );
+    height: calc( $height-nav-item - 19px );
     padding-left: .5rem!important;
     padding-right: .5rem!important;
   }

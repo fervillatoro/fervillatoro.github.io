@@ -16,5 +16,5 @@
   <body>
     <app-root><div style="display: flex;justify-content: center; align-items: center; height:100%;width: 100%;"><div style="color: gray">Espere un momento...</div></div></app-root>
     <script>navigator.serviceWorker.register("/sw.js").then(function(a){a.addEventListener("updatefound",()=>{console.log("Se actualizo el SW a la nueva version.");const b=a.installing;b.state,b.addEventListener("statechange",()=>{console.log("El evento statechange ha cambiado")})}),console.log(a),console.log("Registration succeeded.")}).catch(function(a){console.log("Registration failed with "+a)});</script>
-  <script src="runtime.04477333ab7e4b18.js" type="module"></script><script src="polyfills.f2c1a095b37a381f.js" type="module"></script><script src="main.a2ad85b2eda9e888.js" type="module"></script></body>
+  <script src="runtime.04477333ab7e4b18.js" type="module"></script><script src="polyfills.f2c1a095b37a381f.js" type="module"></script><script src="main.5114c49e5e8d6a38.js" type="module"></script></body>
 </html>
