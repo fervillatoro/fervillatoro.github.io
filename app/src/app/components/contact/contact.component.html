@@ -1,0 +1,65 @@
+<div class="separator-nav"></div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <app-title title="Contáctame"></app-title>
+
+      <form [formGroup]="frmContact" class="mt-5">
+        <p>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput placeholder=" " formControlName="email" required>
+            <mat-error *ngIf="frmContactCtrls['email'].invalid">
+              <span *ngIf="frmContactCtrls['email'].hasError('required')">
+                Ingresa tu correo para atender tu mensaje
+              </span>
+              <span *ngIf="frmContactCtrls['email'].hasError('email')">
+                Ingresa un correo válido
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Tipo de consulta</mat-label>
+            <mat-select required formControlName="queryType">
+              <mat-option value="Necesito una app">Necesito una app</mat-option>
+              <mat-option value="Necesito un sitio web">Necesito un sitio web</mat-option>
+              <mat-option value="Solicitar entrevista laboral">Solicitar entrevista para TV</mat-option>
+              <mat-option value="Solicitar entrevista laboral">Solicitar entrevista laboral</mat-option>
+              <mat-option value="Otro">Otro</mat-option>
+            </mat-select>
+            <mat-error *ngIf="frmContactCtrls['queryType'].invalid">
+              <span *ngIf="frmContactCtrls['queryType'].hasError('required')">
+                Elige un tipo de consulta. Si no sabes cuál elegir, puedes seleccionar la opción "Otro"
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Mensaje</mat-label>
+            <textarea matInput required formControlName='msg' style="height: 60px;"></textarea>
+            <mat-error *ngIf="frmContactCtrls['msg'].invalid">
+              <span *ngIf="frmContactCtrls['msg'].hasError('pattern')">
+                Caracteres permitidos: letras, números, $, ¡!, ¿?
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <div *ngIf="!isLoad" class="text-end">
+          <button type="button" mat-raised-button (click)="location.back()" class="me-2">Volver</button>
+          <button type="submit" mat-raised-button (click)="send()" color="primary" [disabled]="frmContact.invalid">
+            Enviar
+          </button>
+        </div>
+
+        <div *ngIf="isLoad" class="d-flex justify-content-end align-items-center">
+          <div class="text-danger">enviando...</div>
+          <mat-spinner diameter="25" class="ms-2" color="warn"></mat-spinner>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

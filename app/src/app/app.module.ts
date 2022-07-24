@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { TitleComponent } from './complements/title/title.component';
 import { SanitizedHTMLPipe } from './pipes/sanitized-html.pipe';
 import { EducationComponent } from './components/education/education.component';
 import { PageNotFoundComponent } from './complements/page-not-found/page-not-found.component';
+import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +26,11 @@ import { PageNotFoundComponent } from './complements/page-not-found/page-not-fou
     TitleComponent,
     SanitizedHTMLPipe,
     EducationComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

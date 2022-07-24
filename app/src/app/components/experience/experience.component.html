@@ -5,12 +5,11 @@
     <div class="col-12 col-md-6">
       <app-title title="Habilidades"></app-title>
       <!-- Cortar en partes  -->
-      <div *ngFor="let arrayChunck of [{ chunck: 2, count: 5 }]">
+      <div *ngFor="let arrayChunck of [{ chunck: 2, count: 6 }]">
         <ul *ngFor="let num of [].constructor(arrayChunck.count); let i = index;" class="list-group mt-3 list-group-horizontal-sm">
           <li *ngFor="let tec of technologies | slice: getSliceBreak(i, arrayChunck.chunck).init : getSliceBreak(i, arrayChunck.chunck).end;"
               class="list-group-item list-group-item-action d-flex align-items-center" >
             <div class="text-center me-2">
-              <img [src]="tec.img.src" style="width: {{tec.img.width}}; height: {{tec.img.height}};" />
               <span [innerHTML]="sanitizer.bypassSecurityTrustHtml(tec.img.svg)"></span>
             </div>
             <div>

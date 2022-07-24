@@ -1,6 +1,6 @@
 /*! Copyright (c) 2022 Alejandro VIllatoro. All Rights Reserved. */
 
-let CACHE_VERSION = "v1.0.1";
+let CACHE_VERSION = "v1.0.2";
 
 let CACHE_ASSETS = [
   '/assets/img/avatar.webp',
@@ -8,10 +8,10 @@ let CACHE_ASSETS = [
   '/offline.html',
 
   //
-  'main.e9681dc205fbdc96.js',
+  'main.a2ad85b2eda9e888.js',
   'styles.54344284321dfc7b.css',
-  'polyfills.8c6c730588edec17.js',
-  'runtime.1c9f5c85f124eb51.js'
+  'polyfills.f2c1a095b37a381f.js',
+  'runtime.04477333ab7e4b18.js'
 ];
 
 self.addEventListener('install', function(event) {

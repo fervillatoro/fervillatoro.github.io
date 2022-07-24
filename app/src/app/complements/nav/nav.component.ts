@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
     { name: 'Inicio',    href: '/' },
     { name: 'Experiencia', href: '/experience' },
     { name: 'Educación',  href: '/education' },
-    // { name: 'Contactar',   href: '/contact' }
+    { name: 'Contactar',   href: '/contact' }
   ];
 
   isPageActive = (href: string) => window.location.pathname == href;
