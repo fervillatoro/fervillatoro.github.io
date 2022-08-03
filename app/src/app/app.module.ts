@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 
 import { MaterialModule } from "./material.module";
+
 import { NavComponent } from './complements/nav/nav.component';
 import { FooterComponent } from './complements/footer/footer.component';
 import { ExperienceComponent } from './components/experience/experience.component';

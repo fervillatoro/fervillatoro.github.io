@@ -1,6 +1,6 @@
 /*! Copyright (c) 2022 Alejandro VIllatoro. All Rights Reserved. */
 
-let CACHE_VERSION = "v1.0.2";
+let CACHE_VERSION = "v1.0.3";
 
 let CACHE_ASSETS = [
   '/assets/img/avatar.webp',
@@ -8,8 +8,8 @@ let CACHE_ASSETS = [
   '/offline.html',
 
   //
-  'main.a2ad85b2eda9e888.js',
-  'styles.54344284321dfc7b.css',
+  'main.41b45d211ae06e87.js',
+  'styles.446e6d38e43e32c7.css',
   'polyfills.f2c1a095b37a381f.js',
   'runtime.04477333ab7e4b18.js'
 ];
