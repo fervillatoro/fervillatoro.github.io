@@ -40,7 +40,7 @@
         <p>
           <mat-form-field appearance="fill" class="w-100">
             <mat-label>Mensaje</mat-label>
-            <textarea matInput required formControlName='msg' style="height: 60px;"></textarea>
+            <textarea matInput required formControlName='msg' style="height: 60px;" (keydown)="lockJumps($event)"></textarea>
             <mat-error *ngIf="frmContactCtrls['msg'].invalid">
               <span *ngIf="frmContactCtrls['msg'].hasError('pattern')">
                 Caracteres permitidos: letras, números, $, ¡!, ¿?
@@ -53,6 +53,9 @@
           <button type="submit" mat-raised-button (click)="send()" color="primary" [disabled]="frmContact.invalid">
             Enviar
           </button>
+          <!-- <button type="button" mat-raised-button (click)="sendMsgWhatsApp()" color="primary">
+            Enviar Whatsapp
+          </button> -->
         </div>
 
         <div *ngIf="isLoad" class="d-flex justify-content-end align-items-center">
