@@ -15,15 +15,43 @@
   <link rel="stylesheet" href="styles.446e6d38e43e32c7.css"></head>
   <body>
     <app-root><div style="display: flex;justify-content: center; align-items: center; height:100%;width: 100%;"><div style="color: gray">Espere un momento...</div></div></app-root>
-    <script>navigator.serviceWorker.register("/sw.js").then(function(a){a.addEventListener("updatefound",()=>{console.log("Se actualizo el SW a la nueva version.");const b=a.installing;b.state,b.addEventListener("statechange",()=>{console.log("El evento statechange ha cambiado")})}),console.log(a),console.log("Registration succeeded.")}).catch(function(a){console.log("Registration failed with "+a)});</script>
-  <script src="runtime.04477333ab7e4b18.js" type="module"></script><script src="polyfills.f2c1a095b37a381f.js" type="module"></script><script src="main.016a88e888732dc5.js" type="module"></script></body>
+    <script>
+    // SW.JS
+    /**
+  El siguiente ejemplo simple registra un ejemplo de trabajador de servicio
+  y luego agrega un controlador de eventos a un botón para que pueda actualizar
+  explícitamente el trabajador de servicio cuando lo desee:
+  */
+    navigator.serviceWorker.register('/sw.js')
+    .then(function(registration) {
 
-  <script>
-    window.onload = function (){
-      document.querySelectorAll('a').forEach(a => {
-    if(a.innerHTML.indexOf('Descargar CV') > -1) a.remove()
-});
-    }
-    
-  </script>
+      registration.addEventListener('updatefound', () => {
+        // se encontro una nueva version de SW y se actualizo
+        console.log("Se actualizo el SW a la nueva version.");
+
+        // Un trabajador de servicio salvaje ha aparecido en reg.installing!
+        const newWorker = registration.installing;
+
+        newWorker.state;
+        // "installing" - el evento de instalación se ha activado, pero aún no se ha completado
+        // "installed"  - instalacion completada
+        // "activating" - el evento de activación se ha disparado, pero aún no se ha completado
+        // "activated"  - completamente activo
+        // "redundant"  - descartado. Se produjo un error en la instalación o se reemplazó por una versión más reciente.
+
+        newWorker.addEventListener('statechange', () => {
+          // newWorker.state ha cambiado
+          console.log("El evento statechange ha cambiado");
+        });
+      });
+      console.log(registration);
+      // El registro funcionó
+      console.log('Registration succeeded.');
+    })
+    .catch(function(error) {
+      // el registro falló
+      console.log('Registration failed with ' + error);
+    });
+    </script>
+  <script src="runtime.04477333ab7e4b18.js" type="module"></script><script src="polyfills.f2c1a095b37a381f.js" type="module"></script><script src="main.a9b725028af293b5.js" type="module"></script></body>
 </html>
