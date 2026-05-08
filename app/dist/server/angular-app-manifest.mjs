@@ -13,7 +13,7 @@ export default {
     "route": "/"
   },
   {
-    "renderMode": 0,
+    "renderMode": 1,
     "preload": [
       "chunk-7NSBGF5C.js"
     ],
