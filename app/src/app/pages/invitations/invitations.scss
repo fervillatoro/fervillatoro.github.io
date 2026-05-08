@@ -1,0 +1,29 @@
+.container-fluid {
+  min-height: 100%;
+  background: linear-gradient(to right, rgb(67, 1, 1), rgb(89, 0, 89));
+}
+
+.card {
+  background: transparent;
+
+  .card-body {
+    padding: 0;
+  }
+
+  img {
+    aspect-ratio: 8.5/11;
+    object-fit: cover;
+    min-height: 250px;
+    border-radius: 16px;
+    width: 100%;
+  }
+}
+
+
+.buttons-container {
+  padding-bottom: 28px;
+}
+
+.alert {
+  margin: 0;
+}
