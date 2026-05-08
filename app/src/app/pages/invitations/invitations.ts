@@ -147,6 +147,7 @@ export class Invitations {
     console.log('invitations init!', this.invitations());
     if (!isPlatformBrowser(this.platformId)) return;
     const id = this.route.snapshot.paramMap.get('id')!;
+    this.showInvitation(id);
     await this.checkAttendance(id);
     this.loading.set(false);
     
