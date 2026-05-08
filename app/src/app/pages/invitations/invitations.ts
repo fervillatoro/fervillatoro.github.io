@@ -144,6 +144,7 @@ export class Invitations {
 
 
   async ngOnInit() {
+    console.log('invitations init!', this.invitations());
     if (!isPlatformBrowser(this.platformId)) return;
     const id = this.route.snapshot.paramMap.get('id')!;
     await this.checkAttendance(id);
