@@ -25,10 +25,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const FireConfig = {
-  FirestoreDefault: getFirestore(app),
   Firestore: getFirestore(app, 'tmp-villatoro'),
 };
-
-
-
-

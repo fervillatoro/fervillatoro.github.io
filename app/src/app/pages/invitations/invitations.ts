@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Inject, inject, PLATFORM_ID, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { doc, getDoc, writeBatch } from "firebase/firestore";
+import { collection, doc, getDoc, setDoc, writeBatch } from "firebase/firestore";
 import {FireConfig} from '../../../firebase/config';
 import { isPlatformBrowser } from '@angular/common';
 interface Invitation {
@@ -24,7 +24,8 @@ export class Invitations {
   loadingBtns = signal(false);
   invitation = signal<Invitation | null>(null);
   
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  }
 
 
   invitations = signal<Invitation[]>([
@@ -80,6 +81,29 @@ export class Invitations {
       img: 'https://firebasestorage.googleapis.com/v0/b/nicefer-app.firebasestorage.app/o/tmp-villatoro-me-invitations%2Finvitacion-suamy.png?alt=media&token=e66a34fb-207d-4fc3-8574-65d757d10b81'
     }
   ]);
+
+  async saveView() {
+    const invitationId = this.route.snapshot.paramMap.get('id');
+    const viewId = doc(collection(FireConfig.Firestore, `/invitations/${invitationId}/views`)).id;
+    const viewsRef = doc(FireConfig.Firestore, `/invitations/${invitationId}/views/${viewId}`);
+    const ipInfo = await this.getIpInfoFromServer();
+
+    const b = writeBatch(FireConfig.Firestore);
+    b.set(viewsRef, {view: true, createdAt: new Date(), ip: ipInfo}, {merge: true});
+    await b.commit();
+    console.log('View saved');
+  }
+
+  async getIpInfoFromServer() {
+    try {
+      const res  = await fetch('https://api.ipquery.io/?format=json');
+      const ipInfo = (await res.json());
+      return ipInfo;
+    } catch (e) {
+      console.warn('No se pudo obtener IP info:', e);
+      return null;
+    }
+  }
 
 
   showInvitation(id: string | null) {
@@ -149,6 +173,7 @@ export class Invitations {
     const id = this.route.snapshot.paramMap.get('id')!;
     this.showInvitation(id);
     await this.checkAttendance(id);
+    await this.saveView();
     this.loading.set(false);
     
     await import('@dotlottie/player-component');
