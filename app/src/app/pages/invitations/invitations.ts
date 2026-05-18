@@ -173,7 +173,7 @@ export class Invitations {
     const id = this.route.snapshot.paramMap.get('id')!;
     this.showInvitation(id);
     await this.checkAttendance(id);
-    await this.saveView();
+    this.saveView();
     this.loading.set(false);
     
     await import('@dotlottie/player-component');
