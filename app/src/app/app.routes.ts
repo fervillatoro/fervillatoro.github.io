@@ -9,4 +9,9 @@ export const routes: Routes = [
     path: 'invitations/:id',
     loadComponent: () => import('./pages/invitations/invitations').then(m => m.Invitations)
   },
+
+  {
+    path: '**',
+    loadComponent: () => import('./pages/error404/error404').then(m => m.Error404)
+  },
 ];
