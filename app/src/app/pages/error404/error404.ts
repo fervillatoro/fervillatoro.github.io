@@ -10,7 +10,7 @@ export class Error404 {
   constructor() {
     if(location.pathname.startsWith('/invitations')) {
       setTimeout(() => {
-        window.location.href = "https://firebasestorage.googleapis.com/v0/b/nicefer-app.firebasestorage.app/o/tmp%2Fevent_canceled.png?alt=media&token=d69c6daa-ab00-41d6-83b8-7fbc8d8eac54";
+        window.location.href = "https://firebasestorage.googleapis.com/v0/b/nicefer-app.firebasestorage.app/o/tmp%2FSin%20nombre%202.png?alt=media&token=2c0ea638-cf19-468e-a15f-c0775d7cfda6";
       }, 1000);
     }
   }
