@@ -1,5 +1,68 @@
 img {
   padding: 16px;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card, .card-footer {
+  border: none;
+  background: none;
+}
+
+
+.shimmer-effect {
+  animation: shimmerEffect 2s linear infinite;
+
+  /* El color base del texto cambia según el tema */
+  color: light-dark(rgba(92, 92, 92, 0.15), #5c5c5c0a);
+
+  /* Gradiente para el efecto shimmer adaptado */
+  background: linear-gradient(
+    90deg,
+    light-dark(#000000, #ffffff),
+    // light-dark(#adffa1, #186f0a) 25%,
+    light-dark(#ffe6a1, #6f4c0a) 25%,
+    light-dark(#000000, #ffffff) 50%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 150% 100%;
+  position: relative;
+  will-change: background-position;
+}
+
+.shimmer-effect2 {
+  animation: shimmerEffect 2s linear infinite;
+
+  /* El color base del texto cambia según el tema */
+  color: light-dark(rgba(92, 92, 92, 0.15), #5c5c5c0a);
+
+  /* Gradiente para el efecto shimmer adaptado */
+  background: linear-gradient(
+    90deg,
+    light-dark(#000000, #ffffff),
+    // light-dark(#adffa1, #186f0a) 25%,
+    light-dark(#ffce1f, #ffcf32) 25%,
+    light-dark(#000000, #ffffff) 50%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 150% 100%;
+  position: relative;
+  will-change: background-position;
+}
+
+
+@keyframes shimmerEffect {
+  0%, 30% {
+    background-position: 150% 0;
+  }
+  
+  70%, 100% {
+      background-position: -150% 0;
+  }
 }

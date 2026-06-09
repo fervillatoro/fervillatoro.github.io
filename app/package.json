@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 192.168.0.108 --port 4209",
     "_comment": "El comando build compila el proyecto, elimina la carpeta docs, la crea de nuevo y copia el dist/browser en la carpeta docs",
     "build": "ng build && rmdir /S /Q ..\\docs && mkdir ..\\docs && robocopy dist\\browser ..\\docs /E && copy dist\\browser\\index.html ..\\docs\\404.html && exit 0",
     "watch": "ng build --watch --configuration development",
