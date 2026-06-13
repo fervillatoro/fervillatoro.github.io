@@ -12,6 +12,7 @@ import { FireConfig } from '../firebase/config';
 export class App {
   
   constructor() {
+    if(location.pathname.includes('192.168.0.')) return;
     this.saveView();
   }
 
